@@ -1,0 +1,126 @@
+.slick-track
+    min-width               : 100%
+.slick
+    &-arrow
+        width               : 50px
+        height              : 50px
+        border              : 0
+        border-radius       : 3px
+        cursor              : pointer      
+        font-size           : 0
+        position            : absolute
+        background          : rgba(255,255,255, .5)
+        color               : color[0]
+
+        &:before
+            font-size       : 21px
+
+    &-prev
+        left                    : 0
+
+        &:before
+            content:  ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAMAAABE+WOeAAABmFBMVEUAAAD////19fX38Pf57PP07/T17vX07fT07fTz7fPz7fP07fL07PLz7PP07fL07fP07PP07PPz7fLz7fLz7PLz7PL07fP07fO+bMfAbcXBbcXBbsbDb8TDb8XFfczGccPGccTGfs3HhdHHhtHIcsLJc8LJc8PJgc3LdMHLdcLLg8vMdcLMhcvNdcDNdsDNhcvOdsDOdsHPiMvQd7/QeL/ReL/SisrSi8rTeb7Ter7TicjTjcvVe73VjcrVjsrVjsvVkczVlM7We73WicfWjcjYfLzYfbzYjMbZisTZjsfZj8faisTam8/bf7vbnM7bnM/cksjck8ncnc/dgLrdns7egLrfn83ggrnhoM3iocvjhLjjoszkosvlhbblhbfmpMrnpMroh7bopMnopcrqibTqpsjqpsnribXsp8jsqMjtirPti7Tt3e3t3u3uqcju1+ju3+3u3+7vqcbvqsfv4e7v4u7v4u/v4+7wjLPwjbPw4O3w4e3w4+7w5O7w5e/xqsbxqsfx4u7x5e/yk7Tyzt7zk7bzzd3z7PLyxe+4AAAAGHRSTlMABhohKS9Jb3OCmqCisMnR5ebw8fLz/P1nMNNBAAAB0klEQVR4AYTOWQ6EERgEwP53fBYR4ch97XklGHWCwuD6rI+55Ojtd2Hj0YGtoB+s3Y4jd2PuNIUzxZyYeBNX0ouBqlyrCr1D+J8caAl3pMtwryn9xiZOhHpxuKeZhNuJAUKwYOVqJw5wQWNVjEj1YpCY5m0nFvCCk1g78QCU+DgxhZv8vPKxqucEqufHEK21M7bwxqqeH5g9MATLzQ1NLQKwO4iZgR1dqMxIw8DYvQq7enYGHjSREh1VbQPnahwe5mHgQxUo1FJQ0bRqxBVAfAyCqMrVZeRVzUpxBqgggygyN0dOSkZezcHHPyQsIjImITk1I6+ooQ1JgSgDSmJQlpCWlVfRMDS2cHLzDQ2PiktMz65oRk4SqOYrSUjKKKgBw8fSxtU3ODwqNjElq7IVSYEIqvtzFYHuUXH0CQK6JzomPiktM6+4vgVJgQBa+BSoyyioWNe14w4fHozwVNW0rcWlngcjfkv0VTR0XWraccUvM5b0YGji3ogr/TDwY6Y3PWPLQOzpE2v6r7U3sfTAmf5ZseUXz3zs+YvE/Etq+UBW+cPAJERk+UZi+Uli+Uxi+U9q/UJu/QX3tDCe+pHi+pdw/U55+wHRPhEUFRMVxNo+AQBKkzpNsOHoVwAAAABJRU5ErkJggg==')
+            height 50px
+            width 50px
+            display: block
+            background-repeat: no-repeat
+
+    &-next
+        right                   : 0
+        &:before
+            content:  ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAAvCAMAAABE+WOeAAABnlBMVEUAAAD////19fX38Pf57PP07/T17vX07fT07fTz7fPz7fP07fL07PLz7PP07fL07fP07PP07PPz7fLz7fLz7PLz7PL07fP07fO+a8a+bMfAbcXBbcbBbsbDb8TEb8XFcMPFfszGccPGccTGfc3HhdHIcsLIc8LIgMzIhtHJc8LJc8PLdMHLdcLLg8vMdcLMhcvNdcDNdsDNhcvOdsDOdsHPiMvQd7/QeL/ReL/ReMDSisrSi8rTeb7Ter7TjcvUisnUjcrVe73VjsrVkczVk83We73WisfWjMjYfbzYi8bYjcfZfbzZjsfZj8faisTam9Dbfrvbf7vbnM7bnM/cksjck8ncnM7dgLndgLrdns7fn83foM7ggrnhgrnhoM3ig7jjhLjjoszkosvlhbblosvmhrfmpMroh7bopMropcrqiLTqpsnribXsp8jtirPtqMft3u3ui7Tuqcju1+ju3+3u3+7vqsfv4e7v4u7v4u/v4+7wjLPw4O3w4e3w4u7w5O7w5e/xqsbxq8fx4u7x5e/yk7Tyk7Xyzd3yzt7z7PI5ALeaAAAAGHRSTlMABhohKS9Jb3OCmqCisMnR5ebw8fLz/P1nMNNBAAABz0lEQVR42pXW5VfDMBAA8LCydR3duo2tQwcDihUfDBvu7u7u7u5y/zXOqyTQ/L71vWtferncBekwLO9wekSP08GzDPqHmRNASeDMiCzSDnr2SEK0ySYCjmgz4cItbiBxW/ThVh+Q+aya6Igo+FtUhCpeEU56QbUY+J9V8as+A/G+3582RYMR7p+02sAY2/euimCM+LXTdjDK/lliYNxH8XGAc9DV/wg63Hu8ADjd4bL6G9ASEGIAazBcHqw8By0GsYB12RYK5pScgQaLeMC7ai6Q0/NPQI1HDiC4rpGllNwjUHEgF5CcVmQH/BmHoORCXsXTy93xztbG6vL83PT42EBPgxRIjEveBQUvUhbD08Xe5srC7NRIb0dTuKwwRwr4E2LSVCWh+v7zxfb6ytLM5Ghfa11VKCh/fD82ExQ8qvW/3h/vb22sLS/OTU+8r6dRSkmMT1Wtx0nOD9xWZyf5M440+eGB4KY2LyugzSePWFL6W4plqUi7Xyypfh7aS4Oyvh4YUn0OhcsL9fUmEOu/uyqEqWeOeL4OOocx58VMe37p+wN9/0EmN0V/o+iflP2Zsv/TzhfK+aVjiaaYjxTzl2a+098f8PcTl1f0urD3kzcav0flgiUwqAAAAABJRU5ErkJggg==')
+            height 50px
+            width 50px
+            display: block
+            background-repeat: no-repeat
+        
+    &-dots
+        display             : block
+        margin-bottom       : 50px
+        font-size           : 0
+
+        text-align          : center
+
+        li
+            display         : inline-block
+
+        button
+            width           : 10px
+            height          : 10px
+            padding         : 0
+            border          : 0
+            border-radius   : 50%
+            font-size       : 0
+            background      : #E9E9E9
+            margin          : 0 6px
+
+        .slick-active
+            button
+                width       : 15px
+                height      : 15px
+                background  : color[0]
+    &-vertical
+        .slick
+            &-arrow 
+                position    : static 
+                width       : 100%
+            &-prev 
+                transform   : rotate(90deg)
+            &-next 
+                transform   : rotate(90deg)
+                
+.slick-vertical
+    .slick-track, .slick-list 
+        min-height          : 100%
+
+[data-carousel]
+    position                : relative
+
+    .slick
+        &-arrow
+            position        : absolute
+            top             : 50%
+            z-index         : 50
+            transform       : translateY(-50%)
+            transition      : transition[0]
+            padding         : 0 
+
+        &-prev
+            left            : 0
+
+        &-next
+            right           : 0
+
+[data-carousel=three]
+    .slick
+        &-prev
+            left            : 0
+
+        &-next
+            right           : 0
+
+[data-carousel=one]
+    .slick-dots
+        position            : relative
+        z-index             : 10
+        margin              : 0
+
+@media (max-width: 991px)
+    [data-carousel] > div > ul > .slick-arrow
+        margin-top          : -60px 
+
+@media (min-width: (viewport + 90)) 
+    [data-carousel] > div > ul > .slick 
+        &-prev 
+            left            : -45px
+        &-next 
+            right           : -45px
+
+.thumbs
+    .slick-arrow
+        &:before
+            width 38px
+            height 38px
+            background-size: contain

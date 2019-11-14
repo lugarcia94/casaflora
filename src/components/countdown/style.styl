@@ -1,0 +1,192 @@
+icon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAAHeEJUAAAAABGdBTUEAALGPC/xhBQAAAkdJREFUOBGVlE9IVVEQxjVSgvBPK2sRbhRs48o2QVDgMlzUSldvL+RWxE0p6KLatXRptC5qUctCA1ubS0VB8S+IKGp6/H3z5rx77r3PHg18d2a+b2beeeece5uasBDCkryC3xakD8g9ywl+pILK5/RYKbLfI1ETS71UwL2PhTYrR0iBeAhOQa9VEhy5ENyv3iCYMjV7LIhsU96MOd+meRuemCP/FYNOkiVwKy1QxxGQjYPHYFoJlk0i0TJtRbG7Xg7X2czjlKJB1lXbTS/e9ubX7iv6+V4X4+CSl45l6yZZNSqED/hR8Nnz6r8tjkCcBVtgHUwUdS3jOZAtgiHwAvwBsgFrIHhgaQjtIoinwH2Pu13r0NEsg6fswKFE7LZDx7VGPAY2NaG4p++g+hBrppqbtSwf/ES7gLpk6j2TVJ2vKWeq0Rov8cNlucqgzRLtao1dQNZTLIbThZG1mkbQb2kIB/hJ8AqcOHe3OEDTR8A38AU8KxWkBAU6gK+gkf2lYA50pf25GFFHrk2QLYMnsYD4DhhMcl3rYbANZHpp+qNuHiKuTMPsiqQFcDpcWe6AVQPXA/YlYtp5I3VrZYtG1HmgXTvUZ7RSo8OQjejcKz5nxv1/O27bGU1vvbGi63nuSYv7eu4T5CMwz0pSXckbhn7Ex/5z7cmE1ozpPYwfubSxYUyfPnvx/lWvF4Suhkyn2d1wSlJAvW78GZDpNc4MYgDE76lO8yWovhpZmUXwWtkMiMPWiMtvSOxD7AC6EcfgX7aDOAZKP3wF0LexDQhFjV4AAAAASUVORK5CYII='
+
+.countdown 
+    position: absolute 
+    top: 15px 
+    left: 50%
+
+    display: inline-block
+    padding: 5px 
+    border-radius: 7px
+
+    font-size: 13px
+    font-weight: bold 
+
+    background: #F74646
+    color: #FFC928
+
+    transform: translateX(-50%)
+
+    &:before 
+        content: 'Faltam: '
+        font-size: 13px
+        font-weight: regular 
+        margin-right: 5px
+        color: #fff
+
+    &__label 
+        font-size: 0
+        &:before 
+            content: ':'
+            font-size: 13px
+
+    &__item
+        &--seconds, &--days
+            .countdown__label:before 
+                display: none 
+
+        &--days
+            margin-right: 5px
+
+.countdown
+    @media(max-width: 991px)
+        &:before
+            display: none!important
+
+.offer-day
+    [data-countdown=true]
+        &.showcase__item
+            padding-bottom: 60px
+
+    .countdown__item--days
+        @media(max-width: 991px)
+            padding: 0!important
+            .countdown__label
+                font-size: 0
+
+            .countdown__number
+                display: flex
+                align-items: center
+
+                &:after
+                    content: 'D' 
+                    display: block
+                    font-size: 24px
+                    margin-left 5px
+                    color: #fff
+
+    .countdown__item--hours
+        @media(max-width: 991px)
+            padding: 0!important
+            .countdown__label
+                font-size: 0
+
+            .countdown__number
+                display: flex
+                align-items: center
+
+                &:after
+                    content: 'H' 
+                    display: block
+                    font-size: 24px
+                    margin-left 5px
+                    color: #fff
+
+    .countdown__item--minutes
+        @media(max-width: 991px)
+            padding: 0!important
+            .countdown__label
+                font-size: 0
+
+            .countdown__number
+                display: flex
+                align-items: center
+
+                &:after
+                    content: 'M' 
+                    display: block
+                    font-size: 24px
+                    margin-left 5px
+                    color: #fff
+
+    .countdown__item--seconds
+        @media(max-width: 991px)
+            padding: 0!important
+            .countdown__label
+                font-size: 0
+
+            .countdown__number
+                display: flex
+                align-items: center
+
+                &:after
+                    content: 'S' 
+                    display: block
+                    font-size: 24px
+                    margin-left 5px
+                    color: #fff
+
+    .countdown 
+        top: auto 
+        bottom: 0 
+
+        display: flex 
+        justify-content: center 
+        align-items: center 
+        width: 100%
+        height: 50px
+        border-radius: 0 0 7px 7px
+
+        &:before 
+            content: ''
+            background-image: url(icon)
+            background-repeat: no-repeat
+            background-size: 100% 100% 
+            width: 20px
+            height: 20px
+            display: inline-block
+
+        &__item 
+            display: flex 
+            justify-content: center 
+            align-items: center
+            padding: 0 5px
+
+        &__number 
+            font-size: 24px
+            font-weight: bold 
+            color: #FFC928
+
+        &__label 
+            display: inline 
+            padding: 0 5px
+            font-size: 13px
+            font-weight: medium 
+
+            text-transform: uppercase
+
+            color: #fff 
+
+            &:before 
+                display: none 
+
+.product__container
+    .countdown 
+        top: 0 
+        display: flex 
+        justify-content: center 
+        align-items: center
+        
+        width: 100%
+        height: 50px
+        border-radius: 7px 7px 0 0
+        padding: 5px 0
+
+        font-size: 15px
+        white-space: nowrap
+
+        &:before, &:after 
+            font-size: 12px
+
+        &:before 
+            content: 'Faltam '
+
+        &:after 
+            content: ' para o fim da promoção'
+            font-size: 13px
+            font-weight: regular 
+            color: #fff
+            margin-left: 5px
+
+    [data-countdown=true]
+        padding-top: 60px

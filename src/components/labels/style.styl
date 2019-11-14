@@ -1,0 +1,79 @@
+.labels
+    &-discount 
+        display         : none
+    &--collection
+        position        : absolute
+        bottom          : 0
+        left            : 50%
+        display         : flex 
+        flex-wrap       : wrap
+        width           : 100%
+        transform       : translateX(-50%)
+
+    .flag
+        flex            : 0 0 auto
+        display         : inline-block
+
+        font-size       : 12px
+        font-weight     : 500
+ 
+
+        background      : #F3ECF2
+        color           : color[0]
+        padding         : 5px 10px
+
+        border-radius   : 5px
+        margin          : 3px
+
+        &.frete-gratis
+            background  : #33af1d
+            color       : #fff
+            position    : absolute
+            top         : -30px
+            right       : 0
+            padding     : 3px
+            pointer-events: none
+
+    &--collection
+        .flag 
+            cursor: pointer
+            &:hover 
+                background: color[0]
+                color: #F3ECF2
+
+    .novidade
+        background: #FFB200
+
+    .frete-gratis
+        background: #7ABE66
+
+    .mais-vendidos
+        background: #FF7000
+    
+    .entrega-imediata
+        background: #434343
+
+    &__item
+        &--discount
+            display         : none 
+        &--percent
+            display         : none
+            justify-content : center
+            align-items     : center
+            flex-wrap       : wrap
+            border-radius   : 7px
+            background      : #F74646
+            position        : absolute
+            top             : 0
+            right           : 0
+            padding         : 4px
+            font-size       : 14px
+            font-weight     : bold
+            line-height     : 17px
+            color           : #fff
+
+            &:before
+                content     : '-'
+
+            &.on
+                display     : flex
