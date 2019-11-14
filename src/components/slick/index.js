@@ -84,7 +84,11 @@ $('[data-carousel]').each(function () {
                     }
                 },
                 {
-                    breakpoint: 992
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
                 }
             ];
 

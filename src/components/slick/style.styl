@@ -21,8 +21,8 @@
         &:before
             content:  ''
             background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAsVBMVEUAAAAAmZkApaAApKEAo6EAqqoAoaEAo6AApKAApJ8An58ApKAApKAApaAApKAApKAApZ8Ao58ApKAAn58AqpwApKAApKAApqAAoqIApJ8ApKAApKAApaAApqIApKAApKAApKEApp8ApKAApKAAo6AApKAApKAApaAApKAApaUApKAAo58ApKAApaAApKAAo6MAoqIApJ4ApKAApKAAoqIAqKAApKAAo6AApqEApKAApKCltZPrAAAAOnRSTlMABVuHZAwbzt4tGNbuM9rrJcD+EBLG8Cs3OPH0Pj/5yklN29Wc/Oeb9hHCPfrL4yQpKujpLCPB6i6GBKSG3QAAANFJREFUeNrtl9kSgjAMRaOCuygVwR03cMEVN8z/f5jT4dWn3lFBOe/nNp1JpwllvJFcvqDpgF8sMXO5ouxXayypN1TPNzim2UJ8ialef4xoYz4LC6hf0gF924HqZ7ubcr+H+f2U+4Phn/sj1Fd4f4qM3Ul8vjpiStaMEea0YAiPfMbAA5aYv6K1wQgboA0kXgA10nYXvGjl/QH8zNg/JiDhhCaEv5HgfD/hjCdcEpEADlnhFU0wCR808VEXusUNHvexheMegStPBC1dD02njI/wBLOv/0DRS63cAAAAAElFTkSuQmCC')
-            height 50px
-            width 50px
+            height 40px
+            width 40px
             display: block
             background-repeat: no-repeat
             background-size: 60%
@@ -36,8 +36,8 @@
         &:before
             content:  ''
             background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAsVBMVEUAAAAAmZkApaAApKEAo6EAqqoAoaEAo6AApKAApJ8An58ApKAApKAApaAApKAApKAApZ8Ao58ApKAAn58AqpwApKAApKAApqAAoqIApJ8ApKAApKAApaAApqIApKAApKAApKEApp8ApKAApKAAo6AApKAApKAApaAApKAApaUApKAAo58ApKAApaAApKAAo6MAoqIApJ4ApKAApKAAoqIAqKAApKAAo6AApqEApKAApKCltZPrAAAAOnRSTlMABVuHZAwbzt4tGNbuM9rrJcD+EBLG8Cs3OPH0Pj/5yklN29Wc/Oeb9hHCPfrL4yQpKujpLCPB6i6GBKSG3QAAANFJREFUeNrtl9kSgjAMRaOCuygVwR03cMEVN8z/f5jT4dWn3lFBOe/nNp1JpwllvJFcvqDpgF8sMXO5ouxXayypN1TPNzim2UJ8ialef4xoYz4LC6hf0gF924HqZ7ubcr+H+f2U+4Phn/sj1Fd4f4qM3Ul8vjpiStaMEea0YAiPfMbAA5aYv6K1wQgboA0kXgA10nYXvGjl/QH8zNg/JiDhhCaEv5HgfD/hjCdcEpEADlnhFU0wCR808VEXusUNHvexheMegStPBC1dD02njI/wBLOv/0DRS63cAAAAAElFTkSuQmCC')
-            height 50px
-            width 50px
+            height 40px
+            width 40px
             display: block
             background-repeat: no-repeat
             transform: scale(-1)
@@ -96,6 +96,7 @@
             z-index         : 50
             transform       : translateY(-50%)
             transition      : transition[0]
+            background-color: transparent
             padding         : 0 
 
         &-prev
@@ -125,9 +126,9 @@
 @media (min-width: (viewport + 90)) 
     [data-carousel] > div > ul > .slick 
         &-prev 
-            left            : -45px
+            left            : -25px
         &-next 
-            right           : -45px
+            right           : -25px
 
 .thumbs
     .slick-arrow
