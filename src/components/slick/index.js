@@ -71,8 +71,8 @@ $('[data-carousel]').each(function () {
             break;
 
         case 'showcase':
-            config.slidesToShow = 5;
-            config.slidesToScroll = 5;
+            config.slidesToShow = 4;
+            config.slidesToScroll = 4;
             config.arrows = true;
             config.dots = false;
             config.responsive = [
@@ -84,8 +84,7 @@ $('[data-carousel]').each(function () {
                     }
                 },
                 {
-                    breakpoint: 992,
-                    settings: "unslick"
+                    breakpoint: 992
                 }
             ];
 

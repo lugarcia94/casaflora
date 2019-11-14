@@ -111,15 +111,10 @@
         font-size: 14px
         font-weight: 300px
         line-height: 17px
-        &:after
-            font-icon          : url('./svg/dropdown.svg')
-            font-size          : 7px
-            margin-left        : 2px
-            color              : #C2C2C2
+ 
     &__item
         &--lv1
-            position            : relative
-            margin-right        : 20px
+            position            : relative 
             display             : flex
             align-items         : center
             &:hover
@@ -141,7 +136,7 @@
                         font-icon          : url('./svg/question.svg')
                         font-size          : 30px
                         margin-right       : 5px
-                        color              : color[2]
+                        color              : color[0]
                 // .head-nav__sub
                 //     left: -45%!important
 
@@ -150,7 +145,7 @@
                     font-icon          : url('./svg/user.svg')
                     font-size          : 30px
                     margin-right       : 5px
-                    color              : color[2]
+                    color              : color[0]
         &--lv2
 
             + .head-nav__item--lv2
@@ -315,13 +310,10 @@
 @media(min-width: 992px)
     .head-nav
         width: 100%
-        // max-width: 340px
         &__sub 
             min-width: 200px
+
         &__item
             &--lv1
-                // &:nth-child(1), &:nth-child(2)
-                //     > .head-nav__link
-                //         font-size       : 0
                 > a 
                     white-space         : nowrap

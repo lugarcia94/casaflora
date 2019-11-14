@@ -5,11 +5,11 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="0%" y1="1.3671875%" x2="100.397892%" y2="1.3671875%" id="linearGradient-1">
-            <stop stop-color="#BA69C8" offset="0%"></stop>
+            <stop stop-color="color[0]" offset="0%"></stop>
             <stop stop-color="#F48FB1" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="0%" y1="1.3671875%" x2="100.397892%" y2="1.3671875%" id="linearGradient-2">
-            <stop stop-color="#BA69C8" offset="0%"></stop>
+            <stop stop-color="color[0]" offset="0%"></stop>
             <stop stop-color="#F48FB1" offset="100%"></stop>
         </linearGradient>
     </defs>

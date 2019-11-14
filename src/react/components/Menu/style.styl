@@ -155,7 +155,7 @@
             line-height            : 27px!important  
 
         &--nv1
-            color                  : #BA69C8
+            color                  : color[0]
             font-size              : 15px
             line-height            : 18px!important
             font-weight            : 500
@@ -215,7 +215,7 @@
 
         transition                          : transition[0]
 
-        background-image                    : linear-gradient(270deg, #BA69C8 0%, #F48FB1 100%)
+        background-color                    : color[0] 
 
         .scrolling--top & 
             box-shadow                      : 0 10px 10px rgba(0,0,0,.01)
@@ -252,10 +252,7 @@
                 font-size                   : 0
                 background                  : #fff
                 visibility                  : hidden
-                opacity                     : 0 
-                width                       : 100%
-                left                        : 0
-                height                      : 390px
+                opacity                     : 0    
 
                 .banner
                     margin: -30px -40px
@@ -263,8 +260,7 @@
                 > .menu__sub-inner
                     display                     : inline-block
                     white-space                 : normal
-                    overflow-y                  : auto
-                    border-right                : 1px solid #D8D8D8 
+                    overflow-y                  : auto 
                     .banner
                         display                 : none
 
@@ -277,9 +273,8 @@
 
 
             &-all
-                
-                
                 height: 55px
+                order: 1
                 &:after
                     content: ''
                     display: block
@@ -440,15 +435,14 @@
     .menu__categories--nv1 
         > .menu__sub-inner 
             > .menu__list
-                column-count: 3
-                width: 590px
+                column-count: 3 
 
 .category__brands
     padding-right: 25px
     &--title
         font-size: 14px
         line-height: 17px
-        color: #BA69C8
+        color: color[0]
         font-weight: 500
     &--list
         column-count: 2

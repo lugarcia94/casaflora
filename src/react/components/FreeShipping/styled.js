@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const bgContainer = '#F3ECF2';
-const bgContainerFill = 'linear-gradient(to right, #BA69C8, #F48FB1)';
+const bgContainerFill = 'linear-gradient(to right, color[0], #F48FB1)';
 
 const borderRadius = "6px";
 const progressbarHeight = '6px';
@@ -51,7 +51,7 @@ export const Label = styled.span``;
 
 export const LabelPrice = styled.span`
     font-weight: 700;
-    color: #BA69C8;
+    color: color[0];
 `;
 
 export const LabelDescription = styled.strong`

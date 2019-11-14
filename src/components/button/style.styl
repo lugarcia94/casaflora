@@ -16,7 +16,7 @@ buttonColorClose = color[1]
         height           : buttonHeight
         border-radius    : buttonRadius
 
-        background-image : linear-gradient(90deg, #BA69C8 0%, #F48FB1 100%)
+        background-image : linear-gradient(90deg, color[0] 0%, #F48FB1 100%)
 
         transition       : background .3s .6s ease
 
@@ -29,7 +29,7 @@ buttonColorClose = color[1]
             width               : buttonWidth
             height              : buttonHeight
 
-            background-image    : linear-gradient(90deg, #BA69C8 0%, #F48FB1 100%)
+            background-image    : linear-gradient(90deg, color[0] 0%, #F48FB1 100%)
             border-radius       : buttonRadius
 
 
@@ -110,24 +110,26 @@ buttonColorClose = color[1]
             &:before
                 display             : block
                 content             : ''
-                background          : svg-load('svg/cat2.svg')
+                background          : svg-load('svg/cart.svg')
                 width               : 23px
-                height              : 30px
+                height              : 30px 
+                color               : color[0] 
+                background-repeat   : no-repeat
+                background-size     : 100%  
 
         &-qty
             display                 : flex
             justify-content         : center
             align-items             : center
-            background              : #F3ECF2 
+            background              : color[0]
             width                   : 34px
             height                  : 34px
             flex                    : 0 0 34px
-            border-radius           : 50%
-
+            border-radius           : 50%  
             font-size               : 15px
-            font-weight             : 600
-
-            color                   : color[1]
+            font-weight             : 600   
+            z-index                 : 99
+            color                   : #fff
             
         
         .notification
