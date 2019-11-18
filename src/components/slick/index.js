@@ -30,9 +30,41 @@ $('#blackfriday-page .products_showcase > div > ul').slick({
     ]
 });
 
+if($(window).width() < 768) {
+    $('.ruler__list').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+}
 
-
-
+$('.minibanner__container').slick({
+    infinite: false,
+    arrows: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    dots: false,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }
+    ]
+});
 
 $('[data-carousel]').each(function () {
     const type = $(this).attr('data-carousel');
