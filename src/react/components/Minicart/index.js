@@ -71,7 +71,7 @@ class Minicart extends Component {
                             <span className="minicart__price">{new Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(item.sellingPrice / 100)}</span>
                         </div>
                     </a>
-                    <button onClick={() => this.props.remove(index)} className="minicart__trash"></button>
+                    <button onClick={() => this.props.remove(index)} className="minicart__trash">X</button>
                 </li>
             );
         });
