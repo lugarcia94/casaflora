@@ -188,7 +188,7 @@ class Menu extends Component {
                             {list}
                             {allCategory}
                         </ul>
-                        {this.state.mobile && <footer dangerouslySetInnerHTML={{ __html: slot[0].innerHTML }}></footer>}
+                        {this.state.mobile}
                     </nav>
                 </div>
             </div>

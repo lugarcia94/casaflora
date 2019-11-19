@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const bgContainer = '#F3ECF2';
-const bgContainerFill = 'linear-gradient(to right, color[0], #F48FB1)';
+const bgContainer = '#e6e6e6';
+const bgContainerFill = 'linear-gradient(to right, color[0], color[0])';
 
 const borderRadius = "6px";
 const progressbarHeight = '6px';
@@ -58,5 +58,5 @@ export const LabelDescription = styled.strong`
     display: block;
     font-size: 15px;
     font-weight: 600;
-    color: #F48FB1;
+    color: color[0];
 `;

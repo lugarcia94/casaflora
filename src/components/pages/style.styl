@@ -87,15 +87,13 @@
 
 .resultado-busca-filtro
     font-size           : 13px
-    font-weight         : regular
-    display             : none        
+    font-weight         : regular     
 
     .compare, .filterBy
         display         : none
 
     .orderBy
         white-space     : nowrap
-        margin          : 0 70px
         text-align      : center
 
         label, .SumoSelect
@@ -106,7 +104,7 @@
             max-width       : 135px
 
             > .CaptionCont
-                border-color    : #FFE6AB
+                border-color    : #8b8a8a
                 border-radius   : 3px
                 > span
                     height: 23px;
@@ -118,7 +116,7 @@
                     &:before 
                         font-icon   : url('./svg/down.svg') 
                         font-size   : 5px
-                        color       : #FF7000
+                        color       : #8b8a8a
 
                     > i
                         display     : none 
@@ -128,7 +126,8 @@
 
 
 
-
+.searchResultsTime
+    display: none
 @media (min-width: 992px)
     body.category
         #main
@@ -146,7 +145,7 @@
     .searchResultsTime
         flex            : 1 1 auto
         margin-top      : 0
-
+        display         : none 
         text-align      : left
 
         .value

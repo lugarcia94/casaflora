@@ -188,7 +188,7 @@
                     transition: all 150ms ease-in-out
                     &:before
                         content         : 'Continuar lendo'
-                        color           : #F48FB1
+                        color           : color[0]
                         background      : #fff
                         height          : 50px
                         position        : absolute
@@ -781,7 +781,7 @@
     .thumbs-two
         order                   : -1
         width                   : 110px
-        padding                 : 15px
+        padding                 : 0 15px
         flex                    : 0 0 110px   
         
         .slick-next, .slick-prev 
@@ -1028,23 +1028,27 @@
             font-weight: 400  
             margin: 2px 5px
             cursor: pointer!important
-            background: #F3ECF2
+            background: #fff
+            border: 1px solid color[0]
             color: color[1]
 
 
+
             &:hover 
-                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAZCAMAAABaQ73FAAACl1BMVEUAAADEdtj/ncS9bMnzj7a8a8rAbcjxjLTzkLK6asnAbsbwjLT0j7G6acm/bce9a8i+a8a+bMfwjLPyjbLyjrK7ase8a8jAbcbti7PujLTzj7H1kLK9asi+a8jyjrO6ace6aci7ace7aci7ase7asi8ase8asi8a8e9a8a9a8e+a8a+a8e+bMa+bMe/bMW/bMa/bMe/bcbAbcXAbcbBbcXBbcbBbsXBbsbCbsTCbsXCbsbCb8XDbsTDb8TDb8XEb8TEb8XEcMTFcMPFcMTFccTGcMPGccPGccTHccLHccPHcsLHcsPIcsLIcsPIc8PJcsLJc8HJc8LJc8PKc8HKc8LKdMHKdMLLdMHLdMLLdcLMdMHMdcDMdcHNdcDNdcHNdsDNdsHOdr/OdsDOdsHPdsDPd7/Pd8DQd7/Qd8DQeL/QeMDReL7ReL/SeL/Seb7Seb/Teb3Teb7Teb/Ter7Ter/Uer3Uer7Ver7Ve73Ve77We7zWe73We77WfL3XfLzXfL3YfLzYfL3YfbzYfb3ZfbvZfbzZfrzafrvafrzbfrrbfrvbfrzbf7vbf7zcf7rcf7vcgLvdgLrdgLvegLnegLregLvegbrfgbnfgbrfgrrggbjggrjggrnggrrhgrjhgrnhg7jhg7nig7fig7jihLjihLnjg7fjhLfjhLjkhLfkhbfkhbjlhbblhbflhrfmhbbmhrbmhrfnhrbnh7Xnh7bnh7foh7Xoh7bph7XpiLXpiLbqiLTqiLXqibTqibXqibbribTribXsibTsirPsirTsirXtirPtirTti7Pti7Tui7Pui7TvjLLvjLPvjLTwjLLwjLPwjbLxjbLxjbPyjbHyjbLyjrHyjrLyjrPzjrHzjrLzj7H0j7JUckDDAAAAH3RSTlMADQ1CQoGBgYHPz8/P0NDg4ODg4ODz8/Pz8/Pz/v7+ZUXYJAAAAkNJREFUOMullD+LX2UQRt95/sy8V91FCwMJkV2S1JZiIyhoZWGj379LqRDL/PY+Fpd8gKz9wHAOc6bWWmXdvY1LKsvISFBptaIh0nCZopg2kWP99eH28Vyr1uL9Qyi4F112WQwn3OFEKncgZ7tqyswWCvztw23V4suvcGQXRBiQVesoM5sZPWkKdNkwIZ3cDHeav7+/Vd2/WiSFLooSaQg1mUJHs7BDyLDToEGXC53909/l1+pMh/YSalijjJD2Mi4P5QnskjLMVoYB9/d19zKadL4IKDTR5/g8nnbgzoEct+6za5BRDuQ4x0/7nODHevE1I5dglSFMuaxy2pkqdXbo8rW50PC1jfvnepBKE9ElyMw4o0wmXdz5hImm0ka4Mwqx43psoqg5LdBlSkJGaaeVCXfVJaykcskKhuFOPbi4GaGLBg1dytJLHU1ocHLZTjtdHKXTxXrsUrHLwAUnQVIaaKz9pCMqk4YJ9OkBl52Out6lM4vap4Euu5yJhpeoSxhkZ3+6sEzEjlFvCppSwSJcrSKbQriZyVQZUyRsQhmiPCDCjXqY6kDwVAlWthT02g46R9BQQRwxnQNp65oP6rFDsQWoDAlOWxCzM6XCcTMv5jLJHDcPRGanHnlR2SW6aDr77KU5GxN0GR0ZfY5U1XSOJ4H7aeodIs6az+p5wFK53pSaz+gZ3Klvvwmf1XP8ax3f8Zk954f/13Pdv3hmz7/8U4uvvnxWz3+8v9VavHv9jJ6v77lWeR9vP6vnP/+9fTzX+g+OjhPpakxATgAAAABJRU5ErkJggg==')
+                background: color[0]
                 color: #fff 
                 background-repeat: no-repeat 
 
         &:checked 
             + label 
-                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAZCAMAAABaQ73FAAACl1BMVEUAAADEdtj/ncS9bMnzj7a8a8rAbcjxjLTzkLK6asnAbsbwjLT0j7G6acm/bce9a8i+a8a+bMfwjLPyjbLyjrK7ase8a8jAbcbti7PujLTzj7H1kLK9asi+a8jyjrO6ace6aci7ace7aci7ase7asi8ase8asi8a8e9a8a9a8e+a8a+a8e+bMa+bMe/bMW/bMa/bMe/bcbAbcXAbcbBbcXBbcbBbsXBbsbCbsTCbsXCbsbCb8XDbsTDb8TDb8XEb8TEb8XEcMTFcMPFcMTFccTGcMPGccPGccTHccLHccPHcsLHcsPIcsLIcsPIc8PJcsLJc8HJc8LJc8PKc8HKc8LKdMHKdMLLdMHLdMLLdcLMdMHMdcDMdcHNdcDNdcHNdsDNdsHOdr/OdsDOdsHPdsDPd7/Pd8DQd7/Qd8DQeL/QeMDReL7ReL/SeL/Seb7Seb/Teb3Teb7Teb/Ter7Ter/Uer3Uer7Ver7Ve73Ve77We7zWe73We77WfL3XfLzXfL3YfLzYfL3YfbzYfb3ZfbvZfbzZfrzafrvafrzbfrrbfrvbfrzbf7vbf7zcf7rcf7vcgLvdgLrdgLvegLnegLregLvegbrfgbnfgbrfgrrggbjggrjggrnggrrhgrjhgrnhg7jhg7nig7fig7jihLjihLnjg7fjhLfjhLjkhLfkhbfkhbjlhbblhbflhrfmhbbmhrbmhrfnhrbnh7Xnh7bnh7foh7Xoh7bph7XpiLXpiLbqiLTqiLXqibTqibXqibbribTribXsibTsirPsirTsirXtirPtirTti7Pti7Tui7Pui7TvjLLvjLPvjLTwjLLwjLPwjbLxjbLxjbPyjbHyjbLyjrHyjrLyjrPzjrHzjrLzj7H0j7JUckDDAAAAH3RSTlMADQ1CQoGBgYHPz8/P0NDg4ODg4ODz8/Pz8/Pz/v7+ZUXYJAAAAkNJREFUOMullD+LX2UQRt95/sy8V91FCwMJkV2S1JZiIyhoZWGj379LqRDL/PY+Fpd8gKz9wHAOc6bWWmXdvY1LKsvISFBptaIh0nCZopg2kWP99eH28Vyr1uL9Qyi4F112WQwn3OFEKncgZ7tqyswWCvztw23V4suvcGQXRBiQVesoM5sZPWkKdNkwIZ3cDHeav7+/Vd2/WiSFLooSaQg1mUJHs7BDyLDToEGXC53909/l1+pMh/YSalijjJD2Mi4P5QnskjLMVoYB9/d19zKadL4IKDTR5/g8nnbgzoEct+6za5BRDuQ4x0/7nODHevE1I5dglSFMuaxy2pkqdXbo8rW50PC1jfvnepBKE9ElyMw4o0wmXdz5hImm0ka4Mwqx43psoqg5LdBlSkJGaaeVCXfVJaykcskKhuFOPbi4GaGLBg1dytJLHU1ocHLZTjtdHKXTxXrsUrHLwAUnQVIaaKz9pCMqk4YJ9OkBl52Out6lM4vap4Euu5yJhpeoSxhkZ3+6sEzEjlFvCppSwSJcrSKbQriZyVQZUyRsQhmiPCDCjXqY6kDwVAlWthT02g46R9BQQRwxnQNp65oP6rFDsQWoDAlOWxCzM6XCcTMv5jLJHDcPRGanHnlR2SW6aDr77KU5GxN0GR0ZfY5U1XSOJ4H7aeodIs6az+p5wFK53pSaz+gZ3Klvvwmf1XP8ax3f8Zk954f/13Pdv3hmz7/8U4uvvnxWz3+8v9VavHv9jJ6v77lWeR9vP6vnP/+9fTzX+g+OjhPpakxATgAAAABJRU5ErkJggg==')
                 color: #fff 
+                background: color[0]
                 background-repeat: no-repeat 
                 font-weight: 700
 
- 
+    .combination_unavaliable
+        opacity .4
+        pointer-events: none
 
 .sku-selector-container 
     .specification
@@ -1096,7 +1100,7 @@
                     z-index: -1
                     margin: -1px
                     border-radius: inherit; 
-                    background: linear-gradient(to right, color[0], #F48FB1)
+                    background: linear-gradient(to right, color[0], color[0])
 
 
 .produto
@@ -1148,45 +1152,16 @@
                     z-index: -1
                     margin: -1px
                     border-radius: inherit; 
-                    background: linear-gradient(to right, color[0], #F48FB1)
+                    background: linear-gradient(to right, color[0], color[0])
 
         &__extra-info
             display: none
 
     .productDescription
-        max-height          : 130px 
-        overflow             : hidden!important
         position            : relative
         transition          : all 150ms ease-in-out
 
-        &:before
-            content         : 'Continuar lendo'
-            color           : #F48FB1
-            background      : #fff
-            height          : 42px
-            position        : absolute
-            bottom          : 0 
-            width           : 100% 
-            display         : flex
-            align-items     : center
-            justify-content : flex-start
-            font-size       : 12px
-            font-weight     : 600
-            cursor          : pointer    
-            border-bottom   : 1px solid #ccc    
 
-        &:after
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAMAAADtRZdSAAAAJ1BMVEUAAAD/////v7/1mbj4lbH1kbP0kbH1kLL1kLL0kLL0kLH1j7H0j7GGu5BmAAAADHRSTlMAAQQZJGR2nK2/7/YA5HNeAAAAL0lEQVR42iXGQRYAIARAwa+ixP3PW49ZDSfbYd7KnaA1BcR/XPhWZCyKpdHGHsADRdMBhhov1xAAAAAASUVORK5CYII=')
-            content             : ''
-            display             : block
-            width               : 12px
-            position            : absolute
-            bottom              : 0
-            background-repeat   : no-repeat
-            right               : 15px
-            height              : 50px
-            background-position : center
-            cursor              : pointer  
 
         &.on__text
             max-height: none
