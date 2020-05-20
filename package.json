@@ -1,8 +1,8 @@
 {
-  "name": "auaha",
+  "name": "amopoema",
   "author": "Lucas Garcia <lucasgaarciaa@gmail.com>",
   "vtex": {
-    "store": "auaha",
+    "store": "amopoema",
     "acronym": "rf",
     "environment": "vtexcommercestable",
     "device": "web",

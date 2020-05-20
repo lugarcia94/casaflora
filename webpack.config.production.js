@@ -6,7 +6,7 @@ const   IconfontWebpackPlugin   = require('iconfont-webpack-plugin');
 
 const config = {
     entry: {
-        appCosmetico: './src/index.js',
+        appAmopoema: './src/index.js',
         quickview: './src/pages/quickview/index.js',
         vendor: ['whatwg-fetch', 'slick-carousel', 'jquery'],
     },
