@@ -1,45 +1,45 @@
-const   webpack                 = require('webpack');
-const   path                    = require('path');
-const   MiniCssExtractPlugin    = require("mini-css-extract-plugin");
-const   IconfontWebpackPlugin   = require('iconfont-webpack-plugin');
-
+const webpack = require("webpack")
+const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const IconfontWebpackPlugin = require("iconfont-webpack-plugin")
 
 const config = {
     entry: {
-        appAmopoema: './src/index.js',
-        quickview: './src/pages/quickview/index.js',
-        vendor: ['whatwg-fetch', 'slick-carousel', 'jquery'],
+        appAmopoema: "./src/index.js",
+        quickview: "./src/pages/quickview/index.js",
+        vendor: ["whatwg-fetch", "slick-carousel", "jquery"],
+        "checkout-custom": "./src/pages/checkout/index.js",
     },
     output: {
-        path: path.resolve( __dirname, './deploy'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, "./deploy"),
+        filename: "[name].js",
     },
-    mode: 'production', // none, development or production(default)
+    mode: "production", // none, development or production(default)
     resolve: {
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: [".js", ".jsx", ".json"],
         alias: {
-            Core: path.resolve(__dirname, './src/core')
-        }
+            Core: path.resolve(__dirname, "./src/core"),
+        },
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "./[name].css"
+            filename: "./[name].css",
         }),
         new webpack.ProvidePlugin({
-            Promise: "bluebird"
+            Promise: "bluebird",
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
         }),
         // new webpack.optimize.CommonsChunkPlugin({
         //     name: "vendor"
         // }),
         new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('production')
-            }
-        })
+            "process.env": {
+                NODE_ENV: JSON.stringify("production"),
+            },
+        }),
     ],
     module: {
         rules: [
@@ -49,80 +49,80 @@ const config = {
                 exclude: /node_modules/,
                 query: {
                     plugins: ["transform-runtime", "react-html-attrs"],
-                    presets: ['env', 'react']
-                }
+                    presets: ["env", "react"],
+                },
             },
             {
                 test: /\.(eot|woff|woff2|ttf|png|jpg|gif)$/,
-                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+                loader: "url-loader?limit=30000&name=[name]-[hash].[ext]",
             },
             {
                 test: /\.svg$/,
-                loader: 'svg-inline-loader'
+                loader: "svg-inline-loader",
             },
             {
                 test: /\.css$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    "css-loader",
                     {
-                        loader: 'postcss-loader',
+                        loader: "postcss-loader",
                         options: {
                             plugins: (loader) => [
                                 new IconfontWebpackPlugin(loader),
-                                require('postcss-inline-svg')(),
-                                require('autoprefixer')({
-                                    grid: true
+                                require("postcss-inline-svg")(),
+                                require("autoprefixer")({
+                                    grid: true,
                                 }),
-                                require('cssnano')({
-                                    zindex: false
-                                })
-                            ]
-                        }
-                    }
-                ]
+                                require("cssnano")({
+                                    zindex: false,
+                                }),
+                            ],
+                        },
+                    },
+                ],
             },
             {
                 test: /\.styl$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    'css-loader',
+                    "css-loader",
                     {
-                        loader: 'postcss-loader',
+                        loader: "postcss-loader",
                         options: {
                             plugins: (loader) => [
                                 new IconfontWebpackPlugin(loader),
-                                require('postcss-inline-svg')(),
-                                require('autoprefixer')({
-                                    grid: true
+                                require("postcss-inline-svg")(),
+                                require("autoprefixer")({
+                                    grid: true,
                                 }),
-                                require('cssnano')({
-                                    zindex: false
-                                })
-                            ]
-                        }
+                                require("cssnano")({
+                                    zindex: false,
+                                }),
+                            ],
+                        },
                     },
                     {
-                        loader: 'stylus-loader',
+                        loader: "stylus-loader",
                         options: {
-                            import: path.resolve(__dirname, './src/core/index.styl')
-                        }
-
-                    }
-
-                ]
-
+                            import: path.resolve(
+                                __dirname,
+                                "./src/core/index.styl"
+                            ),
+                        },
+                    },
+                ],
             },
-        ]
+        ],
     },
     watchOptions: {
         aggregateTimeout: 300,
-        ignored: /node_modules/
+        ignored: /node_modules/,
     },
     performance: {
-        hints: false
+        hints: false,
     },
     // devtool: 'source-map'
-};
+}
 
-module.exports = config;
+module.exports = config

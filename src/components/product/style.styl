@@ -839,7 +839,7 @@
         align-items: flex-start
         overflow: hidden
 
-    .thumbs-two
+    .thumbs-two, .thumbs
         order: -1
         width: 110px
         padding: 0 15px
@@ -848,6 +848,12 @@
         .slick-next, .slick-prev
             width: 50px !important
             height: 50px
+
+    .thumbs
+        display: block
+
+    .thumbs-two
+        display: none !important
 
     .product
         &__container
@@ -1147,7 +1153,7 @@
         margin-bottom: 10px
 
 @media (min-width: 992px)
-    .thumbs-two
+    .thumbs-two, .thumbs
         order: -1
         position: relative
         flex: 0 0 110px
