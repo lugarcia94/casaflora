@@ -1,137 +1,154 @@
 .slick-track
-    min-width               : 100%
+    min-width: 100%
+
 .slick
     &-arrow
-        width               : 50px
-        height              : 50px
-        border              : 0
-        border-radius       : 3px
-        cursor              : pointer      
-        font-size           : 0
-        position            : absolute
-        background-color    : #fff !important
-        color               : color[0]
+        width: 50px
+        height: 50px
+        border: 0
+        border-radius: 3px
+        cursor: pointer
+        font-size: 0
+        position: absolute
+        background-color: #fff !important
+        color: color[0]
         border: 1px solid color[0]
-        display flex
+        display: flex
         justify-content: center
         align-items: center
+
         &:before
-            font-size       : 21px
+            font-size: 21px
 
     &-prev
-        left                    : 15px
+        left: 15px
 
         &:before
             content: ''
-            display block
+            display: block
             width: 30px
             height: 30px
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2U3OTU4YSIgZD0iTTk2Ni40NCA0MzEuNjk5bDEuNTk4IDAuMzVoLTY4NS4yMTRsMjE1LjQwNi0yMTUuODgxYzEwLjU0OC0xMC41NCAxNi4zMzQtMjQuODE3IDE2LjMzNC0zOS44MDNzLTUuNzg2LTI5LjE2My0xNi4zMzQtMzkuNzI4bC0zMy41MTctMzMuNTM0Yy0xMC41NC0xMC41NC0yNC41ODQtMTYuMzY3LTM5LjU2MS0xNi4zNjctMTQuOTg1IDAtMjkuMDM4IDUuNzg2LTM5LjU3OCAxNi4zMjZsLTM2OS4yNDggMzY5LjIxNGMtMTAuNTgxIDEwLjU4MS0xNi4zNjcgMjQuNjc2LTE2LjMyNiAzOS42Ny0wLjA0MiAxNS4wNzcgNS43NDQgMjkuMTggMTYuMzI2IDM5Ljc0NWwzNjkuMjQ4IDM2OS4yNDhjMTAuNTQgMTAuNTMxIDI0LjU4NCAxNi4zMjYgMzkuNTc4IDE2LjMyNiAxNC45NzcgMCAyOS4wMjItNS44MDMgMzkuNTYxLTE2LjMyNmwzMy41MTctMzMuNTM0YzEwLjU0OC0xMC41MjMgMTYuMzM0LTI0LjU3NiAxNi4zMzQtMzkuNTYxIDAtMTQuOTc3LTUuNzg2LTI4LjI4OS0xNi4zMzQtMzguODJsLTIxNy44MzctMjE3LjA4OGg2ODYuODEzYzMwLjg2MiAwIDU2Ljc5NS0yNi41OTkgNTYuNzk1LTU3LjQ0NHYtNDcuNDI5YzAtMzAuODQ1LTI2LjY5OS01NS4zNjMtNTcuNTYtNTUuMzYzeiI+PC9wYXRoPjwvc3ZnPg==")
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2U3OTU4YSIgZD0iTTk2Ni40NCA0MzEuNjk5bDEuNTk4IDAuMzVoLTY4NS4yMTRsMjE1LjQwNi0yMTUuODgxYzEwLjU0OC0xMC41NCAxNi4zMzQtMjQuODE3IDE2LjMzNC0zOS44MDNzLTUuNzg2LTI5LjE2My0xNi4zMzQtMzkuNzI4bC0zMy41MTctMzMuNTM0Yy0xMC41NC0xMC41NC0yNC41ODQtMTYuMzY3LTM5LjU2MS0xNi4zNjctMTQuOTg1IDAtMjkuMDM4IDUuNzg2LTM5LjU3OCAxNi4zMjZsLTM2OS4yNDggMzY5LjIxNGMtMTAuNTgxIDEwLjU4MS0xNi4zNjcgMjQuNjc2LTE2LjMyNiAzOS42Ny0wLjA0MiAxNS4wNzcgNS43NDQgMjkuMTggMTYuMzI2IDM5Ljc0NWwzNjkuMjQ4IDM2OS4yNDhjMTAuNTQgMTAuNTMxIDI0LjU4NCAxNi4zMjYgMzkuNTc4IDE2LjMyNiAxNC45NzcgMCAyOS4wMjItNS44MDMgMzkuNTYxLTE2LjMyNmwzMy41MTctMzMuNTM0YzEwLjU0OC0xMC41MjMgMTYuMzM0LTI0LjU3NiAxNi4zMzQtMzkuNTYxIDAtMTQuOTc3LTUuNzg2LTI4LjI4OS0xNi4zMzQtMzguODJsLTIxNy44MzctMjE3LjA4OGg2ODYuODEzYzMwLjg2MiAwIDU2Ljc5NS0yNi41OTkgNTYuNzk1LTU3LjQ0NHYtNDcuNDI5YzAtMzAuODQ1LTI2LjY5OS01NS4zNjMtNTcuNTYtNTUuMzYzeiI+PC9wYXRoPjwvc3ZnPg==')
             background-repeat: no-repeat
             background-size: 30px
-            background-position center
-            
+            background-position: center
 
     &-next
-        right                   : 15px
-        
+        right: 15px
+
         &:before
             content: ''
-            display block
+            display: block
             width: 30px
             height: 30px
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2U3OTU4YSIgZD0iTTEwMDcuNjMzIDQ3Mi4yMTRsLTM2OS44MDMtMzY5LjgxMWMtMTAuNTU2LTEwLjU1Ni0yNC42MjYtMTYuMzUxLTM5LjYyOC0xNi4zNTEtMTUuMDE5IDAtMjkuMDgwIDUuODAzLTM5LjYzNiAxNi4zNTFsLTMzLjU3NSAzMy41ODRjLTEwLjU0OCAxMC41NC0xNi4zNTkgMjQuNjE3LTE2LjM1OSAzOS42MjggMCAxNS4wMDIgNS44MTEgMjkuNTU0IDE2LjM1OSA0MC4wOTRsMjE1LjczOCAyMTYuMjEyaC02ODUuNDA4Yy0zMC45MDMgMC01NS4zMjEgMjQuMTkzLTU1LjMyMSA1NS4xMDR2NDcuNDc4YzAgMzAuOTExIDI0LjQxOCA1Ny41NDMgNTUuMzIxIDU3LjU0M2g2ODcuODU2bC0yMTguMTc3IDIxNy40MTljLTEwLjU0OCAxMC41NTYtMTYuMzU5IDI0LjI1MS0xNi4zNTkgMzkuMjYxIDAgMTQuOTk0IDUuODExIDI4Ljg4OCAxNi4zNTkgMzkuNDM2bDMzLjU3NSAzMy40NzVjMTAuNTU2IDEwLjU1NiAyNC42MTcgMTYuMzA5IDM5LjYzNiAxNi4zMDkgMTUuMDAyIDAgMjkuMDcxLTUuODI4IDM5LjYyOC0xNi4zODRsMzY5LjgwMy0zNjkuODAzYzEwLjU4MS0xMC41OSAxNi40MDEtMjQuNzI2IDE2LjM1OS0zOS43NTMgMC4wMzMtMTUuMDc3LTUuNzc4LTI5LjIyMS0xNi4zNjctMzkuNzk0eiI+PC9wYXRoPjwvc3ZnPg==")
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMjQiIGhlaWdodD0iMTAyNCIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCI+PHRpdGxlPjwvdGl0bGU+PGcgaWQ9Imljb21vb24taWdub3JlIj48L2c+PHBhdGggZmlsbD0iI2U3OTU4YSIgZD0iTTEwMDcuNjMzIDQ3Mi4yMTRsLTM2OS44MDMtMzY5LjgxMWMtMTAuNTU2LTEwLjU1Ni0yNC42MjYtMTYuMzUxLTM5LjYyOC0xNi4zNTEtMTUuMDE5IDAtMjkuMDgwIDUuODAzLTM5LjYzNiAxNi4zNTFsLTMzLjU3NSAzMy41ODRjLTEwLjU0OCAxMC41NC0xNi4zNTkgMjQuNjE3LTE2LjM1OSAzOS42MjggMCAxNS4wMDIgNS44MTEgMjkuNTU0IDE2LjM1OSA0MC4wOTRsMjE1LjczOCAyMTYuMjEyaC02ODUuNDA4Yy0zMC45MDMgMC01NS4zMjEgMjQuMTkzLTU1LjMyMSA1NS4xMDR2NDcuNDc4YzAgMzAuOTExIDI0LjQxOCA1Ny41NDMgNTUuMzIxIDU3LjU0M2g2ODcuODU2bC0yMTguMTc3IDIxNy40MTljLTEwLjU0OCAxMC41NTYtMTYuMzU5IDI0LjI1MS0xNi4zNTkgMzkuMjYxIDAgMTQuOTk0IDUuODExIDI4Ljg4OCAxNi4zNTkgMzkuNDM2bDMzLjU3NSAzMy40NzVjMTAuNTU2IDEwLjU1NiAyNC42MTcgMTYuMzA5IDM5LjYzNiAxNi4zMDkgMTUuMDAyIDAgMjkuMDcxLTUuODI4IDM5LjYyOC0xNi4zODRsMzY5LjgwMy0zNjkuODAzYzEwLjU4MS0xMC41OSAxNi40MDEtMjQuNzI2IDE2LjM1OS0zOS43NTMgMC4wMzMtMTUuMDc3LTUuNzc4LTI5LjIyMS0xNi4zNjctMzkuNzk0eiI+PC9wYXRoPjwvc3ZnPg==')
             background-repeat: no-repeat
             background-size: 30px
-            background-position center
-            
-            
-    &-dots
-        display             : block
-        margin-bottom       : 50px
-        font-size           : 0
+            background-position: center
 
-        text-align          : center
+    &-dots
+        display: block
+        margin-bottom: 50px
+        font-size: 0
+        text-align: center
 
         li
-            display         : inline-block
+            display: inline-block
 
         button
-            width           : 10px
-            height          : 10px
-            padding         : 0
-            border          : 0
-            border-radius   : 50%
-            font-size       : 0
-            background      : #E9E9E9
-            margin          : 0 6px
+            width: 10px
+            height: 10px
+            padding: 0
+            border: 0
+            border-radius: 50%
+            font-size: 0
+            background: #E9E9E9
+            margin: 0 6px
 
         .slick-active
             button
-                width       : 15px
-                height      : 15px
-                background  : color[0]
+                width: 15px
+                height: 15px
+                background: color[0]
+
     &-vertical
         .slick
-            &-arrow 
-                position    : static 
-                width       : 100%
-            &-prev 
-                transform   : rotate(90deg)
-            &-next 
-                transform   : rotate(90deg)
-                
+            &-arrow
+                position: static
+                width: 100%
+
+            &-prev
+                transform: rotate(90deg)
+
+            &-next
+                transform: rotate(90deg)
+
 .slick-vertical
-    .slick-track, .slick-list 
-        min-height          : 100%
+    .slick-track, .slick-list
+        min-height: 100%
 
 [data-carousel]
-    position                : relative
+    position: relative
 
     .slick
         &-arrow
-            position        : absolute
-            top             : 50%
-            z-index         : 50
-            transform       : translateY(-50%)
-            transition      : transition[0]
+            position: absolute
+            top: 50%
+            z-index: 50
+            transform: translateY(-50%)
+            transition: transition[0]
             background-color: transparent
-            padding         : 0 
+            padding: 0
 
         &-prev
-            left            : 0
+            left: 0
 
         &-next
-            right           : 0
+            right: 0
 
 [data-carousel=three]
     .slick
         &-prev
-            left            : 0
+            left: 0
 
         &-next
-            right           : 0
+            right: 0
 
 [data-carousel=one]
     .slick-dots
-        position            : relative
-        z-index             : 10
-        margin              : 0
+        position: relative
+        z-index: 10
+        margin: 0
 
 @media (max-width: 991px)
     [data-carousel] > div > ul > .slick-arrow
-        margin-top          : -60px 
+        margin-top: -60px
 
-@media (min-width: (viewport + 90)) 
-    [data-carousel] > div > ul > .slick 
-        &-prev 
-            left            : -25px
-        &-next 
-            right           : -25px
+@media (min-width: (viewport + 90))
+    [data-carousel] > div > ul > .slick
+        &-prev
+            left: -25px
+
+        &-next
+            right: -25px
 
 .thumbs
     .slick-arrow
         &:before
-            width 38px
-            height 38px
+            width: 38px
+            height: 38px
             background-size: contain
+
+.slick-slider .slick-arrow
+    @media (max-width: 992px)
+        border: 0
+        background: none !important
+        z-index: 100
+
+        &:before
+            background-color: #fff
+            width: 20px
+            height: 20px
+            background-size: 15px
+            border: solid 1px color[0]
+            border-radius: 2px
