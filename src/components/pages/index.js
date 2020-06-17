@@ -13,3 +13,5 @@ function modal(element) {
     else
         element.attr('aria-hidden', true);
 }
+
+$('.vitrine .pager').first().hide()
