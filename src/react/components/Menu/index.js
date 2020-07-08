@@ -184,7 +184,7 @@ class Menu extends Component {
     }
 
     render() {
-        let list = this.renderHtml(this.props.items, false, "categories", 0, 8)
+        let list = this.renderHtml(this.props.items, false, "categories", 0, 9)
         let allCategory = this.allCategory()
         let { slot } = this.props
 
