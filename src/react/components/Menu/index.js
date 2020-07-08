@@ -149,7 +149,6 @@ class Menu extends Component {
     }
 
     handleExpanded(evt) {
-        console.log(evt.target)
         if (evt.target.classList.contains("menu__item--has-child")) {
             evt.target.setAttribute(
                 "aria-expanded",
