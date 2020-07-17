@@ -176,7 +176,11 @@ class Menu extends Component {
                 <li class="menu__categories-all">
                     <span class="menu__categories-all__name">Toda loja</span>
                     <div className="menu__categories-all--inner">
-                        <ul class="menu__categories-all--nv0">{list}</ul>
+                        <ul class="menu__categories-all--nv0">
+
+
+                            {list}
+                        </ul>
                     </div>
                 </li>
             )
@@ -294,6 +298,7 @@ class Menu extends Component {
                             </header>
                         )}
                         <ul class="menu__categories menu__categories--nv0">
+                            <li class="menu__item menu__item--nv0"><a href="https://www.loja.poemahit.com.br/colecoes/pre-venda" title="Pré Venda" class="menu__link menu__link--nv0" data-name="Pré Venda"><span>Pré Venda</span></a></li>
                             {list}
                             {allCategory}
                         </ul>
