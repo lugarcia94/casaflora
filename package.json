@@ -2,7 +2,7 @@
   "name": "amopoema",
   "author": "Lucas Garcia <lucasgaarciaa@gmail.com>",
   "vtex": {
-    "store": "amopoema",
+    "store": "authentical",
     "acronym": "rf",
     "environment": "vtexcommercestable",
     "device": "web",
