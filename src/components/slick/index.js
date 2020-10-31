@@ -268,10 +268,41 @@ $(".showcase__new .showcase__container > div > ul").slick({
 })
 
 $(".showcase__showcasetr .showcase__container > div > ul").slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    vertical: false,
+    infinite: false,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                vertical: false,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                arrows: false,
+                dots: false,
+            },
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                vertical: false,
+                slidesToShow: 1,
+                arrows: false,
+                dots: false,
+            },
+        },
+    ],
+})
+
+
+$('section.banner.banner--full >div').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: false,
     infinite: false,
+    dots: true,
+    arrows: true,
     responsive: [
         {
             breakpoint: 992,
@@ -293,4 +324,3 @@ $(".showcase__showcasetr .showcase__container > div > ul").slick({
         },
     ],
 })
-
