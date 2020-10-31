@@ -1,15 +1,19 @@
 .showcase
     {container}
 
-    @media (max-width: 991px)
-        padding-bottom: 38px
+    margin: 60px auto
+
+    .n12colunas, .n6colunas
+        h2.showcase__title.showcase__title--actived
+            display: none!important
 
     h2
         font-weight: 500;
         font-size: 28px;
         line-height: 30px; 
         text-align: center   
-        color: #fff 
+        color: #4F4F4F 
+        margin-bottom: 0
 
     >a
         font-weight: bold
@@ -83,6 +87,7 @@
         line-height: 14px
         margin-top: 10px
         display: flex
+        justify-content: center
 
     &__short-description
         font-size: 11px
@@ -102,13 +107,14 @@
 
         &--name
             letter-spacing: 0.2px
-            color: color[1]
+            color: #828282
             font-size: 15px
-            font-weight: 400
-            line-height: 20px
+            font-weight: 500
+            line-height: 17px
             transition: all 150ms ease-in-out
             height: 42px
             overflow: hidden
+            text-align: center
 
             &:hover
                 text-decoration: none
@@ -605,3 +611,16 @@
 .ame__payment
     max-width 40px
     margin-top 10px
+
+section.duo__showcase 
+    display: flex
+    justify-content: space-between
+    max-width 1320px
+    padding: 0 15px
+    margin: 0 auto
+
+    .showcase.showcase__new
+        max-width 350px
+        width: 100%
+
+    

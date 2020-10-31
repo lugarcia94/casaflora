@@ -30,7 +30,7 @@ $('#blackfriday-page .products_showcase > div > ul').slick({
     ]
 });
 
-if($(window).width() < 768) {
+if ($(window).width() < 768) {
     $('.ruler__list').slick({
         infinite: false,
         arrows: true,
@@ -125,7 +125,29 @@ $('[data-carousel]').each(function () {
             ];
 
             break;
+        case 'showcaseNew':
+            config.slidesToShow = 1;
+            config.slidesToScroll = 1;
+            config.arrows = true;
+            config.dots = false;
+            config.responsive = [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+            ];
 
+            break;
         case 'miniBanner':
             config.slidesToShow = 4;
             config.slidesToScroll = 4;
@@ -212,9 +234,63 @@ $('[data-carousel]').each(function () {
         $(this).find('> div > ul').slick(config);
     } else if (type == 'buytobether') {
 
-    } else {
-        $(this).slick(config);
     }
 
 });
+
+
+
+$(".showcase__new .showcase__container > div > ul").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: false,
+    infinite: false,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                vertical: false,
+                slidesToShow: 1,
+                arrows: false,
+                dots: false,
+            },
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                vertical: false,
+                slidesToShow: 1,
+                arrows: false,
+                dots: false,
+            },
+        },
+    ],
+})
+
+$(".showcase__showcasetr .showcase__container > div > ul").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: false,
+    infinite: false,
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                vertical: false,
+                slidesToShow: 1,
+                arrows: false,
+                dots: false,
+            },
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                vertical: false,
+                slidesToShow: 1,
+                arrows: false,
+                dots: false,
+            },
+        },
+    ],
+})
 
