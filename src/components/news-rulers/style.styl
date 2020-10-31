@@ -15,39 +15,32 @@
         color: #fff 
 
 .newsletter
-    width                   : 100%
-    text-align              : center
-    font-size               : 0
-    display                 : flex
-    justify-content         : space-between
-    padding                 : 20px 25px
-    flex-wrap               : wrap
-    background-color        : color[0]
-    border-radius           : 7px
+    max-width 410px
     
-    @media(max-width: 768px)
-        border-radius       : 0
-        padding             : 30px 15px
+    .newsletter-title
+        display: none
 
-    label
-        font-size           : 12px
 
     #newsletterClientEmail, #newsletterClientName
         width               : 100%
         height              : 50px
         padding-left        : 10px
-        max-width           : 300px
+        max-width           : 335px
         border-radius       : 7px
         border              : none
         margin-right        : 20px
         background-color    : #ffffff
-        font-size           : 18px
-        font-weight         : 300
-        font-style          : italic
-        letter-spacing      : 0.2px
-        color               : #777777
+        border: 2px solid #CFB486;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-size           : 15px
+        font-weight: 700
+        color               : #4F4F4F
+        text-transform: uppercase
+        text-align: center
+        margin-bottom 5px
         &:placeholder
-            color: #777777
+            color: #4F4F4F
 
         @media(max-width: 845px)
             max-width       : 255px
@@ -59,20 +52,16 @@
             margin-right: 0 
 
     #newsletterButtonOK
-        width               : 126px
-        height              : 50px
-        border-radius       : 7px
-        background-color    : color[2]
-        border              : none 
-        font-size           : 13px
-        font-weight         : 700
-        font-style          : normal
-        letter-spacing      : 0.2px
-        color               : #fff
-        appearance          : none
-        cursor              : pointer
-        vertical-align      : bottom
-        transition          : all 150ms ease-in-out
+        background-image: url('data:image/jpeg;base64,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')
+        font-size: 0
+        display: block
+        width: 36px
+        height: 34px
+        border: none
+        background-repeat: no-repeat
+        position: absolute
+        bottom: 0
+        cursor pointer
 
         &:hover
             opacity: 0.8
@@ -131,7 +120,7 @@
 
     fieldset
         display         : inline-block
-        width           : calc(100% - 270px)
+        width           : 100%
 
         @media(max-width: 1170px)
             margin: 20px 0!important
@@ -142,3 +131,13 @@
             bottom      : 0
             left        : 0
             width       : 240px
+
+
+.banner__news
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    max-width 1100px
+    padding: 0 15px
+    margin: 0 auto            

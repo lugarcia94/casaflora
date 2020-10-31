@@ -5,10 +5,29 @@
         padding-bottom: 38px
 
     h2
-        visibility: hidden
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 30px; 
+        text-align: center   
+        color: #fff 
 
-        &.showcase__title--actived
-            visibility: visible
+    >a
+        font-weight: bold
+        font-size: 14px
+        text-transform: uppercase
+        line-height: 40px
+        color: #FF4F00
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:after
+            content: ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAJFBMVEUAAAD/UAD/UAD/SgD/UAD/TAD/UAD/TwD/TwD/TwD/TwD/TwDlbkdBAAAAC3RSTlMAECAwMFBQv8/f78SDPS8AAAA3SURBVHjance5AYAwDANA2bxC+88L5E9aX3coNsPk0D3fuN5DZ/dIFzQjvNkpOhq7Y8ORNjnrPjWYAqXXtA8TAAAAAElFTkSuQmCC')
+            width 15px
+            height 15px
+            display: block
+            margin-left 5px
 
     &__main
         text-align: left

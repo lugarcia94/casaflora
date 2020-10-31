@@ -1,6 +1,41 @@
 .minibanner
-    text-align: center
-    padding-top: 30px
+    text-align: center 
+    background: #333333
+    padding: 50px 0
+
+    h2
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 30px; 
+        text-align: center   
+        color: #fff 
+
+    >a
+        font-weight: bold
+        font-size: 14px
+        text-transform: uppercase
+        line-height: 40px
+        color: #FF4F00
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:after
+            content: ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAMAAAARSr4IAAAAJFBMVEUAAAD/UAD/UAD/SgD/UAD/TAD/UAD/TwD/TwD/TwD/TwD/TwDlbkdBAAAAC3RSTlMAECAwMFBQv8/f78SDPS8AAAA3SURBVHjance5AYAwDANA2bxC+88L5E9aX3coNsPk0D3fuN5DZ/dIFzQjvNkpOhq7Y8ORNjnrPjWYAqXXtA8TAAAAAElFTkSuQmCC')
+            width 15px
+            height 15px
+            display: block
+            margin-left 5px
+
+    .minibanner__category
+        display: flex
+        align-items: center
+        max-width 1320px
+        padding: 0 15px
+        justify-content: center
+        margin: 30px auto
+
     @media(max-width : 991px)
         padding-top: 0
         .slick-dots
@@ -26,7 +61,18 @@
             transform: scale(1.05)
     .box-banner
         padding: 0 5px
+
+section.minibanner__full 
+    width: 100%
+    text-align: center
+
+section.minibanner-inst 
+    text-align: center
+    margin: 30px 0
+
 .minibanner-mid
+    background: #CAD7CB
+    padding: 30px
     &__container
         max-width: 1320px
         width: 100%
@@ -34,7 +80,7 @@
         margin: 0 auto
         display: flex
         align-items: center
-        justify-content: center
+        justify-content: space-around
         @media(max-width : 767px)
             flex-wrap: wrap
     .box-banner
@@ -64,6 +110,9 @@
             transform: scale(1.05)
 
 .banner--full
+
+    .slick-list
+        margin: 0 auto
 
     .banner__container 
         display: flex 

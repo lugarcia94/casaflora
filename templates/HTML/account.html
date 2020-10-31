@@ -1,62 +1,80 @@
-<!DOCTYPE html>
-<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
-    
-    <head>
-        <vtex:template id="00-likecosmeticos-head" />
-    </head>
-    <body id="account-page">
-        <div class="wrapper">
-            <vtex:template id="00-likecosmeticos-menu" />
+<ul class="newmenu__list">
+    <li class="has__child">
+        <a href="#">vinhos</a>
+        <div class="newmenu__list-sub">
+            <ul class="newmenu__list-nv2">
+                <li><a href="#">em destaque</a>
+                    <ul class="newmenu__list-nv3">
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
 
-            <div class="wrapper__container">
-                <vtex:template id="00-likecosmeticos-header" />
-            
-                <main class="main" id="main">
-                    <!-- BreadCrumb -->
-                    <section class="breadcrumb">
-                        <div class="breadcrumb__container">
-                            <div class="bread-crumb">
-                                <ul>
-                                    <li><a title="wawcadeiras Cométicos" href="/">wawcadeiras Cométicos</a></li>
-                                    <li class="last"><strong><a title="Integracao" href="/_secure/account">Minha conta</a></strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- / BreadCrumb -->
-            
-                    <div class="main__container layout__col2--left" id="main__container">
-                        <aside class="sidebar  layout__left"><vtex.cmc:menuAccount /></aside>
-            
-                        <div class="catagory__main layout__main">
-                            <div class="account__user-profile"><vtex.cmc:accountUserProfile /></div>
-                            <div class="account__address"><vtex.cmc:accountAddress /></div>
-                        </div>
-            
-                    </div>
-                </main>
-                
-                
-            </div>
-            
-            <vtex:template id="00-likecosmeticos-footer" />
-            <vtex:template id="00-likecosmeticos-scripts" />
-            <script src="/arquivos/bootstrap.js"></script>
-            <script type="text/javascript">
-                $(document).ready( function(){
-                    var hash = $(location).attr('hash');
-                    var $links = $('a[data-toggle="modal"]');
-        
-                    $.each( $links, function(){
-                        var $this = $(this);
-                        if( $this.attr('href') === hash ){
-                            $this.click();
-                        } 
-                    });
-                })
-            </script>
-    
+                    </ul>
+                </li>
+            </ul>
+            <ul class="newmenu__list-nv2">
+                <li><a href="#">em destaque</a>
+                    <ul class="newmenu__list-nv3">
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+                        <li><a href="#"><strong>Novidades</strong></a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="newmenu__list-nv2">
+                <li><a href="#">Tipos de uva</a>
+                    <ul class="newmenu__list-nv3">
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#"><strong>ver todos</strong></a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="newmenu__list-nv2">
+                <li><a href="#">Tipos de uva</a>
+                    <ul class="newmenu__list-nv3">
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#"><strong>ver todos</strong></a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="newmenu__list-nv2">
+                <li><a href="#">Tipos de uva</a>
+                    <ul class="newmenu__list-nv3">
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#">Cabernet Souvignon</a></li>
+                        <li><a href="#"><strong>ver todos</strong></a></li>
+                    </ul>
+                </li>
+
+            </ul>
         </div>
-        
-    </body>
-</html>
+        <div class="category__image">
+            <a href="#">
+                <img src="/arquivos/promo.jpg" />
+            </a>
+        </div>
+    </li>
+    <li><a href="#">vinhos</a></li>
+    <li><a href="#">vinhos</a></li>
+    <li><a href="#">vinhos</a></li>
+    <li><a href="#">vinhos</a></li>
+    <li><a href="#">vinhos</a></li>
+    <li><a href="#">vinhos</a></li>
+    <li><a href="#">outlet</a></li>
+</ul>
