@@ -62,24 +62,7 @@ buttonColorClose = color[1]
         cursor           : pointer
         user-select      : none
 
-        &--close
-            .lines
-                background: transparent
-                transition: background 0.3s 0s ease
 
-                &:before
-                    top           : 0
-                    width         : buttonWidth
-                    background    : buttonColorClose
-                    transform     : rotate3d(0, 0, 1, 45deg)
-                    transition    : top 0.3s ease, transform 0.3s 0.5s ease, background .3s ease
-
-                &:after
-                    top           : 0
-                    width         : buttonWidth
-                    background    : buttonColorClose
-                    transform     : rotate3d(0, 0, 1, -45deg)
-                    transition    : top 0.3s ease, transform 0.3s 0.5s ease, background .3s ease
 
 
     &__minicart

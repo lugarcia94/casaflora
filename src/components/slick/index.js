@@ -30,12 +30,12 @@ $('#blackfriday-page .products_showcase > div > ul').slick({
     ]
 });
 
-if ($(window).width() < 768) {
-    $('.ruler__list').slick({
+if ($(window).width() < 992) {
+    $('.ruler__list ul').slick({
         infinite: false,
         arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         dots: false,
         responsive: [
             {
