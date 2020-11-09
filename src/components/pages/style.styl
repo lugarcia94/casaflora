@@ -11,18 +11,19 @@
         display: flex
         justify-content: center
         align-items: center
-        width: 26px
-        height: 26px
+        width: 31px
+        height: 31px
         border-radius: 7px
         margin: 1px
-        font-size: 16px
+        font-size: 12px
         background: #fff
-        color: #333333
+        color: #4F4F4F
         overflow: hidden
 
         &.pgCurrent, &:hover
-            background: color[0]
-            color: #fff
+            border: 2px solid #CFB486;
+            box-sizing: border-box;
+            border-radius: 5px;
 
     .previous, .next
         font-size: 0
@@ -33,19 +34,16 @@
     .previous
         &:before
             font-icon: url('./svg/next.svg')
-            transform: scale(-1)
-            color: color[2]
+            transform: scale(-1) 
+            color: #CFB486
 
-        &:hover
-            color: #fff
+ 
 
     .next
         &:before
-            font-icon: url('./svg/next.svg')
-            color: color[2]
-
-        &:hover
-            color: #fff
+            font-icon: url('./svg/next.svg') 
+            color: #CFB486
+ 
 
 .vitrine
     margin-top: 30px
@@ -85,16 +83,22 @@
             display: inline-block
             vertical-align: middle
 
+        >label
+            display: none
+
         .SumoSelect
-            max-width: 135px
+            max-width: 150px
 
             > .CaptionCont
-                border-color: #8b8a8a
-                border-radius: 3px
+                border: 2px solid #CFB486
+                border-radius: 5px
 
                 > span
                     height: 23px
                     line-height: 23px
+                    font-weight: 600
+                    text-transform: uppercase
+                    color:#4F4F4F
 
                 > label
                     display: flex
@@ -103,14 +107,16 @@
 
                     &:before
                         font-icon: url('./svg/down.svg')
-                        font-size: 5px
-                        color: #8b8a8a
+                        font-size: 7px
+                        color: #CFB486
 
                     > i
                         display: none
 
             > .optWrapper
                 width: calc(100% + 100px)
+                right: 0!important
+                left: auto
 
 .searchResultsTime
     display: none
@@ -153,15 +159,18 @@
 
         &:first-child
             order: 0
-
-        &:nth-child(2)
-            order: 2
+ 
 
         &:nth-child(3)
             order: 3
 
         &:nth-child(4)
             order: 1
+
+        @media(max-width: 991px)
+            flex-direction: initial
+            padding: 0 15px
+            margin: 0
 
 .empty-search
     font-size: 13px
@@ -617,3 +626,18 @@ body.institutional
 
     strong
         font-weight: bold
+
+.seo--description
+    @media(max-width: 991px)
+        padding: 0 15px
+    h3
+        font-weight: bold
+        font-size: 16px
+        line-height: 20px
+        color: #828282 
+        margin-bottom 15px
+
+    p 
+        font-size: 14px
+        line-height: 20px
+        color: #828282

@@ -3,44 +3,52 @@
     display: flex
     align-items: center
     justify-content: space-between
-    margin-top 5px
-    margin-bottom 20px
+    background: #FFFAF0
+    padding: 10px 15px 
 
     a 
-        font-size               : 12px 
-        font-weight             : 400
-        color                   : #453F3F
+        font-weight: 500
+        color: #828282
+        font-size: 12px
+        text-transform: uppercase
+        line-height: 19px
+        display: flex
+        align-items: center
     ul 
         display                 : flex 
         justify-content         : flex-start 
-        align-items             : center 
-        margin                  : 10px -2px 
+        align-items             : center  
     li 
-        padding                 : 2px 
-
-        &:first-child
-            &:before
-                content: 'Você está em:'
-                font-size: 12px
-                color: #8B8A8A
-                font-weight: 400
-                margin-right: 5px
-
+        display                 : flex  
+        align-items             : center  
+ 
         &:not(:last-child):after 
-            content             : '/'
-            font-size           : 10px 
-            color               : #453F3F
+            content             : ''  
             display             : inline-block 
-            margin              : 0 0 0 5px
+            width 15px
+            height 15px
+            background-size: 13px
+            background-position: center
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAG1BMVEUAAACAgICAgICEhISCgoKBgYGCgoKCgoKCgoLLIeIwAAAACHRSTlMAMEBfcICv7zm/QVYAAAAqSURBVHjaY4AAJkYGZMDBwYzMZaWQz8bBjsRj5uBgJYfHgMpjYGFhwAYAcDMBCa6ozCwAAAAASUVORK5CYII=');
+            margin: 0 5px
+            background-repeat: no-repeat
+
+
         &:first-child 
             a 
                 font-size       : 0 
                 &:before 
                     content     : 'Home'
                     font-size   : 12px 
+                    height 19px
+                    display: block
         &.last 
             a 
-                color           : color[0]
+                color           : #828282
+                font-weight: 700
+
+                &:hover
+                    color: #CFB486
 
 .share__social 
     margin-top: 15px
@@ -56,10 +64,4 @@
         color: #453F3F
         margin-right: 5px
 
-
-@media (max-width: 991px)
-    .breadcrumb ul
-        display: block 
-
-        > li 
-            display: inline
+ 
