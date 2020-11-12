@@ -29,11 +29,11 @@ attrs.forEach((attr) => {
 const setSkuID = (sku) => {
     const code = $vtex(".product__code")
     if (code.length) {
-        code.html("SKU: " + sku).addClass("product__code--show")
+        code.html(sku).addClass("product__code--show")
     }
 }
 
-$("#calculoFrete").click(function() {
+$("#calculoFrete").click(function () {
     $(".freight-values", this).hide()
 })
 
@@ -43,7 +43,7 @@ if (body.attr("id") == "product-page") {
     // Correção para o zoom
     zoom()
 
-    $(".product__variants").on("click", function() {
+    $(".product__variants").on("click", function () {
         $(".product__variations").addClass("on")
         if ($(window).width() > 991) {
             if ($("body").hasClass("quickview")) {
@@ -71,22 +71,22 @@ if (body.attr("id") == "product-page") {
             evt.target.classList.remove("on")
     })
 
-    $("#popupCalculoFreteWrapper").on("click", function() {
+    $("#popupCalculoFreteWrapper").on("click", function () {
         $(".product__shipping").addClass("on")
     })
 
-    $("#calculoFrete").on("click", function(evt) {
+    $("#calculoFrete").on("click", function (evt) {
         if ($(evt.target).attr("id") == "calculoFrete")
             $(".product__shipping").removeClass("on")
     })
 
-    $(".product__description .product__title").click(function() {
+    $(".product__description .product__title").click(function () {
         $(this)
             .closest(".product__description")
             .addClass("on")
     })
 
-    $(".description-product__content").click(function(evt) {
+    $(".description-product__content").click(function (evt) {
         if ($(evt.target).hasClass("description-product__content")) {
             $(this)
                 .closest(".product__description")
@@ -94,13 +94,13 @@ if (body.attr("id") == "product-page") {
         }
     })
 
-    $(".product__specification").on("click", ".attrs__title", function() {
+    $(".product__specification").on("click", ".attrs__title", function () {
         $(this)
             .closest(".product__specification")
             .addClass("on")
     })
 
-    $(".product__specification").on("click", ".attrs__container", function(
+    $(".product__specification").on("click", ".attrs__container", function (
         evt
     ) {
         if ($(evt.target).hasClass("attrs__container")) {
@@ -116,7 +116,7 @@ if (body.attr("id") == "product-page") {
     })
 
     // Quando carrega o produto pega o sku
-    vtexjs.catalog.getCurrentProductWithVariations().done(function(product) {
+    vtexjs.catalog.getCurrentProductWithVariations().done(function (product) {
         setSkuID(product.skus[0].sku)
         initProduct(product.productId)
     })
@@ -131,10 +131,10 @@ if (body.attr("id") == "product-page") {
             $(".thumbs").append(
                 `<li class="video"><img src="//img.youtube.com/vi/${id}/0.jpg" /></li>`
             )
-            $(".thumbs .video").on("click", function() {
+            $(".thumbs .video").on("click", function () {
                 $("#include").toggleClass("on-play")
             })
-            $(".thumbs li:not(.video)").on("click", function() {
+            $(".thumbs li:not(.video)").on("click", function () {
                 $("#include").removeClass("on-play")
             })
         }
@@ -147,7 +147,7 @@ if (body.attr("id") == "product-page") {
 
         vtexjs.catalog
             .getCurrentProductWithVariations()
-            .done(function(product) {
+            .done(function (product) {
                 idProduto = product.productId
             })
 
@@ -158,24 +158,63 @@ if (body.attr("id") == "product-page") {
             "/api/catalog_system/pub/products/search?fq=productId:" +
             idProduto
 
-        $.get(urlApi).done(function(data) {
-            let video = data[0].iframe
-            if (video) {
-                const src = $(video[0]).attr("src")
-                const id = src
-                    .match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/)
-                    .pop()
-                $(".thumbs").append(
-                    `<li class="video"><img src="//img.youtube.com/vi/${id}/0.jpg" /></li>`
-                )
-                $(".thumbs-two").append(
-                    `<li class="video"><img src="//img.youtube.com/vi/${id}/0.jpg" /></li>`
-                )
-            }
-            $("#include").append($('<div id="yotubeplay">').append(video))
+        $(".buy__now-product").attr('data-id', idProduto)
+
+        $.get(urlApi).done(function (data) {
+
+            let tipo = data[0].Tipo
+            let regiao = data[0].Região
+            let produtor = data[0].Produtor
+            let teor = data[0]['Teor Alcoólico']
+            let classificacao = data[0].Classificação
+            let volume = data[0].Volume
+            let safra = data[0].Safra
+            let temperatura = data[0]['Temperatura Ideal']
+            let pais = data[0].Países
+
+            $('<span class="pais__product ' + pais + '">' + pais + '</span>').appendTo('.product__image')
+
+            let html = `<ul>
+                <li class="tipo">${tipo}</li>
+                <li class="regiao">${regiao}</li>
+                <li class="produtor">${produtor}</li>
+                <li class="teor">${teor}</li>
+                <li class="classificacao">${classificacao}</li>
+                <li class="volume">${volume}</li>
+                <li class="safra">${safra}</li>
+                <li class="temperatura">${temperatura}</li>
+                
+            </ul>`
+
+            $('.attr__product-right').html(html)
+
+
+
+            let visual = data[0]['Análise Visual']
+            let olfativo = data[0]['Análise Olfativo']
+            let gustativo = data[0]['Análise Gustativo']
+
+            let htmlSensor = `<h2>Análise Sensorial</h2><ul>
+                <li>${visual}</li>
+                <li>${olfativo}</li>
+                <li>${gustativo}</li>
+            </ul>`
+
+            $('.analise__sensorial').html(htmlSensor)
+
+            let harmohtml = data[0]['Harmonizações']
+
+            let htmlharmo = `<h2>Análise Sensorial</h2>
+                ${harmohtml}
+            </ul>`
+
+            $('.product__harm').html(htmlharmo)
+
+
+
         })
 
-        thumbsCarousel()
+        // thumbsCarousel()
 
         // Imagem descrição
         // const image = product.Imagem;
@@ -218,13 +257,13 @@ if (body.attr("id") == "product-page") {
         })
     }
 
-    $(".product").on("click", ".showcase__title", function() {
+    $(".product").on("click", ".showcase__title", function () {
         $(this)
             .closest(".showcase")
             .addClass("on")
     })
 
-    $(".product").on("click", ".showcase__container > div > ul", function(evt) {
+    $(".product").on("click", ".showcase__container > div > ul", function (evt) {
         if ($(evt.target).hasClass("slick-slider")) {
             $(this)
                 .closest(".showcase")
@@ -242,7 +281,7 @@ if (body.attr("id") == "product-page") {
         }
     }
 
-    $(".product__link-more").click(function(evt) {
+    $(".product__link-more").click(function (evt) {
         const top =
             $(".product__title--description").offset().top -
             $("#header").outerHeight()
@@ -266,11 +305,11 @@ if (body.attr("id") == "product-page") {
             $("body").addClass("product--availabled")
         }
 
-        setTimeout(function() {
-            $(".video").on("click", function() {
+        setTimeout(function () {
+            $(".video").on("click", function () {
                 $("#include").toggleClass("on-play")
             })
-            $("li:not(.video)").on("click", function() {
+            $("li:not(.video)").on("click", function () {
                 $("#include").removeClass("on-play")
             })
         }, 1000)
@@ -317,7 +356,7 @@ if (body.attr("id") == "product-page") {
         if (label) {
             const discount = $.trim(label.text().split("-")[1]).split(" ")
 
-            $.each(discount, function(index, item) {
+            $.each(discount, function (index, item) {
                 const productDiscount = item.split("/")
 
                 if (qtd < parseInt(productDiscount[0])) {
@@ -346,11 +385,11 @@ if (body.attr("id") == "product-page") {
         $(".progressive").remove()
         $(".product__actions--button").before(HTML)
     }
-    $(".qtds__input").on("qtds.change", function(evt, qtd) {
+    $(".qtds__input").on("qtds.change", function (evt, qtd) {
         var qtds = parseInt(qtd) || 1
         discountProgressive(qtds)
     })
-    $(document).ajaxComplete(function() {
+    $(document).ajaxComplete(function () {
         checkTicketProduct()
         checkProduct()
     })
@@ -370,7 +409,7 @@ if (body.attr("id") == "product-page") {
         $(".Selecioneacor .item-dimension-Selecioneacor .group_1 label").length
     ) {
         $(".Selecioneacor .item-dimension-Selecioneacor .group_1 label").each(
-            function() {
+            function () {
                 let variableName = $(this).html()
                 let namevariableNew = "color-" + slug(variableName) + ".jpg"
                 let urlImage = "/arquivos/" + namevariableNew
@@ -396,7 +435,7 @@ if (body.attr("id") == "product-page") {
 
         vtexjs.catalog
             .getCurrentProductWithVariations()
-            .done(function(product) {
+            .done(function (product) {
                 idProduto = product.productId
             })
 
@@ -407,22 +446,22 @@ if (body.attr("id") == "product-page") {
             "/api/catalog_system/pub/products/search?fq=productId:" +
             idProduto
 
-        $.get(urlApi).done(function(data) {
+        $.get(urlApi).done(function (data) {
             let arrayCabelos = data[0]["Tipo de Cabelo"]
             let catFilter = data[0]["categories"]
 
             if (arrayCabelos != null) {
-                arrayCabelos.forEach(function(itemRetorno) {
+                arrayCabelos.forEach(function (itemRetorno) {
                     let urlFilter =
                         catFilter +
                         itemRetorno +
                         "?map=c,specificationFilter_19"
                     $(".item__extra .tipo ul").append(
                         '<li><a href="' +
-                            urlFilter +
-                            '">' +
-                            itemRetorno +
-                            "</a></li>"
+                        urlFilter +
+                        '">' +
+                        itemRetorno +
+                        "</a></li>"
                     )
                 })
             }
@@ -430,17 +469,17 @@ if (body.attr("id") == "product-page") {
             let arrayLinha = data[0]["Linha"]
 
             if (arrayLinha != null) {
-                arrayLinha.forEach(function(itemRetorno) {
+                arrayLinha.forEach(function (itemRetorno) {
                     let urlFilter =
                         catFilter +
                         itemRetorno +
                         "?map=c,specificationFilter_19"
                     $(".item__extra .linha ul").append(
                         '<li><a href="' +
-                            urlFilter +
-                            '">' +
-                            itemRetorno +
-                            "</a></li>"
+                        urlFilter +
+                        '">' +
+                        itemRetorno +
+                        "</a></li>"
                     )
                 })
             }
@@ -450,7 +489,7 @@ if (body.attr("id") == "product-page") {
     getAttributeProdutct()
 
     if ($(window).width() < 992) {
-        $(".productDescription").on("click", function() {
+        $(".productDescription").on("click", function () {
             $(this).toggleClass("on__text")
         })
     }
@@ -465,19 +504,18 @@ if (body.attr("id") == "product-page") {
                 .addClass("thumbs-two")
             $(".thumbs-two").remove()
             thumbs.addClass("clone").after(clone)
-            setTimeout(() => thumbsCarousel(), 600)
         }
     }
 
     const objectThumbs = document.querySelector(".thumbs")
 
-    Object.observe(objectThumbs, function() {
+    Object.observe(objectThumbs, function () {
         imagesThumb()
     })
 
     imagesThumb()
 
-    $("#show").on("click", ".thumbs-two a", function() {
+    $("#show").on("click", ".thumbs-two a", function () {
         const index =
             parseInt(
                 $(this)
@@ -495,15 +533,21 @@ if (
     $(".product__prices .product__description--short .description-title").hide()
 }
 
-if ($(window).width() > 991) {
-    setTimeout(() => {
-        $(".product__right--colunm").scrollToFixed({
-            marginTop: 210,
-            limit:
-                $(".showcase").offset().top -
-                $(".product__right--colunm").outerHeight(),
-            zIndex: 99,
-            dontSetWidth: true,
-        })
-    }, 1000)
-}
+
+$('.buy__now-product').on('click', function () {
+    var idProduto = $(this).attr('data-id')
+    var item = {
+        id: idProduto,
+        quantity: 1,
+        seller: '1',
+    }
+    vtexjs.checkout.addToCart([item], null, 1).done(function (orderForm) {
+        window.alert("Produto adicionado com sucesso!");
+
+    })
+})
+
+
+$('button.button.button__minicart').on('click', function () {
+    window.location.href = "/checkout/#/cart";
+})

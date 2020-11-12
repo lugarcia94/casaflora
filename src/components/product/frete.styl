@@ -34,8 +34,11 @@
     justify-content         : center 
     align-items             : center   
     width                   : 100% 
-    height                  : 100%  
-    background              : #fff  
+    height                  : 100%   
+
+    @media(max-width: 991px)
+        .contentWrapper
+            width 90%
 
     .footer
         display: none 
@@ -50,20 +53,23 @@
     .prefixo, .fitext
         display         : flex
         align-items     : center
-        font-size       : 13px
-        color           : color[1]
-        font-weight     : 600
+        font-weight: bold
+        font-size: 18px
+        line-height: 18px
+        color: #4F4F4F
+        justify-content: space-between;
 
     .fitext
-        width           : 100%
-        height          : 35px 
-        padding         : 0 50px 0 20px 
+        width           : 195px
+        height          : 50px  
         border-radius   : 5px
-        background      : #FBFBFB
-        border          : 1px solid #EAEAEA  
-        font-size       : 14px
+        background: #FFFFFF;
+        border: 2px solid #CFB486;
+        box-sizing: border-box;
+        border-radius: 5px;
         color           : color[0]
         font-style      : italic   
+        padding-left 20px
 
     .content
         > fieldset 
@@ -77,14 +83,17 @@
     .freight-btn
         border          : 0 
         width           : 50px
-        height          : 35px 
+        height          : 50px 
         color           : color[0]
-        font-size       : 14px
+        font-size       : 0
         font-weight     : semi-bold 
         text-transform  : uppercase 
         border-radius   : 3px
         cursor          : pointer
         background      : transparent 
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAMAAADH72RtAAAAV1BMVEUAAADPr4DOtYTPr4DPr4fKtYXPtYXLs4PPs4PMsoPPsoPPtIbPsoXPtYXPtYjPtYfPs4XPtIjPs4XPtYfPtIbPtYbPtIbPtIXPtIbPtIbPtIfPtIbPtIaB2b7bAAAAHHRSTlMAEB8gIDAwQEBQUF9gYG9/gI+Qn6Cvv8/P39/vwXIFeAAAAGBJREFUeNqFjgMWBDEQRDuDtSZG3f+aa8X/ubtELya/MIpgHiY5TR5u7J9sdmL304ruzOsPs0K4n7aIGWji4oXS2gM2CtoHyGjUCeCR4gxcooMADtEWjbCJFMdsL+2+JTdDRwdnBhGMCQAAAABJRU5ErkJggg==')
+        background-repeat: no-repeat
+        background-position: center
 
     .cep-invalido
         position        : relative

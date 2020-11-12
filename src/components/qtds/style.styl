@@ -1,10 +1,7 @@
 .qtds
     display: flex 
-    width: 75px
-    max-width: 75px
-    background: #FBFBFB
-    border: 1px solid #EAEAEA
-    border-radius: 5px
+    width: 115px
+    max-width: 115px  
     position relative
     height 50px
 
@@ -27,22 +24,49 @@
         color: #8B8A8A
 
     .qtds__button--more
-        top: 0
-
+        top: 50%
+        transform: translateY(-50%)
+        right 0
+        font-size: 0
         
 
+        &:before
+            content: ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAKCAMAAABlokWQAAAAJFBMVEUAAADPr4DPr4DPr4fPtYXNs4XPtIbPtYbPtIbPtIfPtIbPtIZ35TSYAAAAC3RSTlMAECAgMJCgr9/f763btgIAAAA4SURBVHjaXMhBDgAQDEXBXwTV+99XIl5glqPNTK/so3wRQRG9UURSpQhRJyjiKoIy+QrMsXIxAQCYAAHqtVNdgAAAAABJRU5ErkJggg==')
+            width 20px
+            height 20px
+            background-repeat: no-repeat
+            background-position: center        
+
     .qtds__button--less
-        bottom: 0
+        top: 50%
+        transform: translateY(-50%)
+        left 0
+        font-size: 0
+
+
+        &:before
+            content: ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAKCAMAAACOlf6TAAAAG1BMVEUAAADPtYXPtIbPtYXNtIbPtIbPs4XPtIbPtIYzxkpDAAAACHRSTlMAMF9gcHCA70+WlfIAAAAzSURBVHjaTciHCQAwEMNAp2f/hVNfYNHEqcwsK416CPsyu9QxIWaIGYK5YCaYC4aQSuM2ltwBeuSesoMAAAAASUVORK5CYII=')
+            width 20px
+            height 20px
+            background-repeat: no-repeat
+            background-position: center
+
 
     &__input 
         background: none 
         flex: 1
         height: 50px 
-        width: 100%
+        width: 60px
         text-align: center 
         border: 0
         min-width: 0
         font-size: 18px
         font-weight: semi-bold
-        color: color[1]
+        color: #4F4F4F
         max-width 50px
+        border: 2px solid #CFB486
+        box-sizing: border-box
+        border-radius: 5px
+        margin: 0 auto

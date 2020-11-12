@@ -8,6 +8,61 @@
     .quickview &
         pointer-events: none
 
+#product-page
+    .breadcrumb
+        background: #fff
+        margin-top: 15px
+        margin-bottom: 60px
+
+        @media(max-width: 991px)
+            margin-bottom: 0
+
+        li:not(:last-child):after
+            margin: 0 10px
+
+    .product__price
+        .valor-por
+            text-align: left
+            strong
+                color: #FF4F00
+                font-size: 25px
+                font-weight: 700
+
+    .visible__ony-category
+        display: flex
+        {container} 
+        align-items: center
+        justify-content: space-around
+        flex-wrap: wrap
+        margin-bottom 60px
+
+
+        .help__div
+            background: #F2F2F2
+            border-radius: 5px;
+            max-width: 406px;
+            padding: 70px 30px;
+            width: 100%;
+            margin-top: 0
+
+            height: 286px
+
+            @media(max-width: 991px)
+                background: #fff
+
+        .banner__news
+            max-width: 406px
+            padding: 0
+            margin: 0
+
+    .product__actions.product__actions--button
+        margin-top: 30px
+
+.portal-notify-me-ref 
+    display: none
+
+.product__other-payment
+    display: none
 .product__image
     .quickview &
         width: 70%
@@ -143,8 +198,7 @@
     margin: 0 auto
 
     .attrs
-        @media (min-width: 992px)
-            width: 74.419%
+    
 
         &__header
             display: none
@@ -352,24 +406,19 @@
         position: relative
         min-height: 425px
 
-    &__description
-        margin: 25px 0
-        {container}
+    &__description 
+        max-width: 100%
 
-        @media (max-width: 991px)
-            margin: 30px 0
+   
 
     &__description--short
-        padding: 0
-        margin: 25px 0
+        padding: 0 
 
     &__review--box
         {container}
         margin-top: 50px !important
 
-        >.product__review
-            @media (min-width: 992px)
-                width: 74.419%
+    
 
     &__extra-info
         {container}
@@ -472,8 +521,14 @@
         display: flex
         justify-content: space-between
         align-items: center
-        flex-wrap: wrap
-        margin: 0 -10px
+        flex-wrap: wrap 
+
+        @media(max-width: 991px)
+            position: absolute
+            top: 0
+            left: 15px
+            right: 15px
+            max-width: 100%
 
         .review
             padding: 5px 10px
@@ -481,11 +536,9 @@
 
     &__code
         visibility: hidden
-        font-size: 13px
+        font-size: 12px
         font-weight: normal
-        color: color[1]
-        text-transform: uppercase
-        padding: 5px 10px
+        color: #979797 
 
         &--show
             visibility: visible
@@ -493,15 +546,13 @@
     &__description
         &-more
             display: none
-
-        .description-short
-            margin: 0 -10px
+ 
 
     &__name
-        font-size: 25px
-        font-weight: 400
-        color: color[1]
-        font-weight: 28px
+        font-weight: bold
+        font-size: 25px 
+        line-height: 34px
+        color: #4F4F4F
 
     &__info
         .buttons--buy
@@ -800,8 +851,7 @@
 .description-short
     font-size: 13px
     color: #8B8A8A
-    font-weight: 400
-    padding: 10px
+    font-weight: 400 
 
 .product__image
     #include
@@ -841,9 +891,7 @@
 
     .thumbs-two, .thumbs
         order: -1
-        width: 110px
-        padding: 0 15px
-        flex: 0 0 110px
+        width: 100% 
 
         .slick-next, .slick-prev
             width: 50px !important
@@ -881,20 +929,28 @@
             &:before
                 display: none
 
-        &__title
-            margin-top: 40px
-            text-transform: lowercase
-            padding-top: 40px
-            border-top: none
-            font-size: 30px
-            font-weight: 300
-            height: auto
+
+
+        &__title 
+            font-weight: bold
+            font-size: 20px
+            line-height: 27px 
+            color: #CFB486
+            background: #fff
+            height 70px
+            border-top-right-radius: 5px
+            border-top-left-radius: 5px
+            width 200px
+            text-transform: capitalize
+            text-decoration: underline
+            display: flex
+            align-items: center
+            justify-content: center
+            
 
             &:after
                 display: none
-
-            &--description
-                width: 74.419%
+ 
 
         &__specification
             .attrs__case
@@ -952,11 +1008,10 @@
         visibility: visible
         opacity: 1
         transform: none
-        width: 74.419%
 
         .productDescription
             padding: 0 0 10px
-            margin-top: 30px
+            margin-top: 70px
 
     .variants
         padding: 0
@@ -1003,15 +1058,14 @@
         align-items: center
 
         a.buy-button.buy-button-ref
-            max-width: 200px
-            background: #e8948a
-            border-radius: 5px
+            max-width: 230px
+            background: #A74238 
             width: 100%
-            height: 50px
-            font-size: 19px
+            height: 60px
+            font-size: 20px
             color: #ffffff
-            font-weight: 500
-            line-height: 50px
+            font-weight: 700
+            line-height: 60px
             text-align: center
             letter-spacing: 2px
             text-transform: uppercase
@@ -1107,6 +1161,16 @@
                         border-radius: 50%
                         padding: 2px
                         transform: translate(-50%, -50%)
+.initial__desc
+    background: #CFB486
+    height 90px
+    box-shadow: 450px 0 #CFB486,-450px 0 #CFB486
+    display: flex
+    justify-content: center
+    align-items: flex-end
+
+    @media(max-width: 991px)
+        display: none
 
 .skuList
     margin: -2px
@@ -1155,8 +1219,9 @@
 @media (min-width: 992px)
     .thumbs-two, .thumbs
         order: -1
-        position: relative
-        flex: 0 0 110px
+        position: relative 
+        max-width: 460px
+        margin: 0 auto
 
     #image
         flex: 1 1 auto
@@ -1164,45 +1229,26 @@
 
     .product
         &__image
-            flex: 0 1 38.21%
+            flex: 0 1 755px
             min-width: 0
+
+            #include
+                display: none
 
             #show
                 margin: -15px
                 display: flex
 
-        &__info
-            flex: 1
-            margin: 0 15px
-            padding: 0 30px
+        &__info 
+            flex: 0 1 375px
 
-        &__right--colunm
-            border: solid 1px transparent
-            border-radius: 7px
-            position: relative
-            background: #fff
-            box-sizing: border-box
-            background-clip: padding-box
-            min-width: 300px
-            max-width: 300px
+        &__right--colunm  
+            position: relative 
+ 
 
             &--wrapper
-                border-radius: 7px
-                padding: 30px 10px
-                background: #fff
-                position: relative
-
-                &:before
-                    content: ''
-                    position: absolute
-                    top: 0
-                    right: 0
-                    bottom: 0
-                    left: 0
-                    z-index: -1
-                    margin: -1px
-                    border-radius: inherit
-                    background: linear-gradient(to right, color[0], color[0])
+                margin: 30px 0
+ 
 
 .produto
     .showcase
@@ -1215,6 +1261,7 @@
 
     .product__shipping
         order: 10
+        margin-bottom:30px
 
     .addthis_inline_share_toolbox
         order: 9
@@ -1237,28 +1284,14 @@
         &__right--colunm
             border: solid 1px transparent
             border-radius: 7px
-            position: relative
-            background: #fff
+            position: relative 
             box-sizing: border-box
             background-clip: padding-box
 
-            &--wrapper
-                border-radius: 7px
-                padding: 30px 10px
-                background: #fff
+            &--wrapper  
                 position: relative
 
-                &:before
-                    content: ''
-                    position: absolute
-                    top: 0
-                    right: 0
-                    bottom: 0
-                    left: 0
-                    z-index: -1
-                    margin: -1px
-                    border-radius: inherit
-                    background: linear-gradient(to right, color[0], color[0])
+       
 
         &__extra-info
             display: none
@@ -1312,3 +1345,380 @@
     @media (max-width: 767px)
         right: 2%
         bottom: 5%
+
+ul.product__ruler 
+    background: #F2F2F2
+    border-radius: 5px
+    margin: 30px 0
+    padding: 15px 25px
+    display: flex
+    justify-content: space-between
+
+    @media(max-width: 991px)
+        justify-content: center
+        background-color: transparent
+
+    li
+        color: #4F4F4F
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        display: flex
+        align-items: center
+
+
+        &:first-child
+            @media(max-width: 991px)
+                display: none
+            &:before
+                content:''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAMAAAB2Mu6sAAAAWlBMVEUAAACPj4+fn5+cnJyXl5eVlZWTk5OXl5eWlpaZmZmZmZmVlZWXl5eYmJiWlpaXl5eVlZWXl5eWlpaYmJiXl5eXl5eYmJiWlpaYmJiXl5eYmJiXl5eWlpaXl5d/MUqnAAAAHXRSTlMAEBAfIDBAQFBQX2Bgb3B/gICPj5Cfn6Cvv8/f74WN9rsAAACWSURBVHjabZAFcgQxDMDS6zIzOfr/MwuhWdKAQUGrqDsTqUDHme4s9s6zX0V3yo9lGeM3YShexJqmPfIUJtd8P4UWEc3wFA6JziLkqUD1EIaVzhSf6CSiz39iRK3RrRPRDkdkxX8KZZIkM/OOFvbZCJjVRCD6stOMlh0phW0xaMYRWRZz6wEcypIB5MpRdY3yRF1nxvsLaKMVK1n7bUYAAAAASUVORK5CYII=')
+                width 25px
+                height 20px
+                background-repeat: no-repeat
+                margin-right 5px
+
+
+        &:nth-child(2)
+            &:before
+                content:''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAATCAMAAAB4HKeYAAAAQlBMVEUAAACfn5+Xl5eVlZWTk5OXl5eWlpaVlZWWlpaVlZWYmJiXl5eYmJiWlpaYmJiXl5eXl5eYmJiXl5eWlpaXl5eXl5eHOyb8AAAAFXRSTlMAECAwQEBQYHCAj5+foK+wv8/f7+9+tAqEAAAAaElEQVR42n2KAwLEUAwFg62Nuf9Vt3Y7H8mDTFichLKTMtD+DrLOW3qfpUEwjJJ61jHVbPezTsimCY+6ZidTiTgSL20NdfgLkllbR6sHndDhBx1wzoc/kS/tpW26SVaaQTtHhpYlOy5/hBQKSgcZBAMAAAAASUVORK5CYII=')
+                width 15px
+                height 20px
+                background-repeat: no-repeat
+                margin-right 5px                
+
+
+.buy__now-product
+    cursor pointer
+
+    span
+        color: #A74238
+        font-weight: bold
+        font-size: 16px
+        text-decoration: underline
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:hover
+            opacity .8
+
+        &:after
+            content: ''
+            width 30px
+            height 30px
+            display: block
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAYCAMAAAAxgAaOAAAAYFBMVEUAAACfQDCfQECtQjqnQDilQDWlQDqjQDinQDimQzamQzmlQjimQDemQjmnQjilQjioQjemQjmnQjimQTioQjmnQTenQTinQzimQTeoQTeoQzmnQTinQjimQjeoQjmnQjhChbFJAAAAH3RSTlMAEBAfIDAwQEBQUGBwcH+Aj5CfoK+wv7/Pz8/f3+/vj7JqBgAAAK5JREFUeNqV0AUOwzAMhWGPmbey+9//llOgzF/hRQpbIkguMiRVhaMMexFc+pzF2DNgJwa8HwbUI/O9GRubUA91IR8u3d49seu90uvtek/0urneLXl35bCsgrLp9Cprcb70iKtq9fiJd3LN+soPbuKtyJu99UOZ9nPd6L2TSmmnkGXmy2wAZ6lsP0qNBkdZYve+2Dy4bNoqXEzismkPvHw+pOODbk1GpFvp2q6rdP6/hx93ETjC4gAAAABJRU5ErkJggg==')
+            background-position: center
+            background-repeat: no-repeat
+            margin-left 5px
+
+.product__bg 
+    background: url('http://casaflora.vteximg.com.br/arquivos/bgprod.png')
+    background-repeat: no-repeat
+    background-position: bottom center
+    background-size: cover
+    
+    @media(max-width: 991px)
+        position: relative
+        padding-top: 100px
+
+
+.buy__now 
+    margin-top: 30px
+
+.product__share 
+    background: #A74238
+    text-align: center
+    padding: 20px
+
+    h2
+        font-weight: bold
+        font-size: 20px
+        line-height: 26px
+        text-align: center
+        text-transform: uppercase
+        color: #fff      
+
+.content__product
+    > br
+        display: none
+
+    .banner__produtor
+        img
+            display: flex
+
+    .analise__sensorial 
+        background: #F2F2F2
+        box-shadow: 450px 0 #F2F2F2,-450px 0 #F2F2F2
+        {container}
+        padding: 40px 0
+        @media(max-width: 991px)
+            display: none
+        h2
+            font-weight: 500
+            font-size: 25px
+            line-height: 30px
+            text-align: center
+            letter-spacing: -0.5px
+            color: #4F4F4F  
+            margin-bottom 30px
+
+        ul
+            display: flex
+            justify-content: space-between
+
+            li
+                background: #fff
+                width 30%
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+                border-radius: 5px
+                padding: 0 45px 30px
+
+                img
+                    display: block
+                    margin: 30px auto
+
+                strong
+                    display: block
+                    margin: 10px 0 20px
+                    text-align: center
+                    font-size: 16px
+
+                span
+                    text-align: center
+                    display: block
+                    font-size: 16px
+                    line-height: 24px
+
+                    text-align: center
+
+                    color: #4F4F4F                   
+
+    .product__harm
+        background: #F2F2F2
+        box-shadow: 450px 0 #F2F2F2,-450px 0 #F2F2F2
+        {container}
+        padding: 40px 0     
+
+        @media(max-width: 991px)
+            display: none   
+        h2
+            font-weight: 500
+            font-size: 25px
+            line-height: 30px
+            text-align: center
+            letter-spacing: -0.5px
+            color: #4F4F4F  
+            margin-bottom 30px
+        ul
+                display: flex
+                justify-content: space-between
+
+                li
+                    background: #fff
+                    width 30%
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+                    border-radius: 5px
+                    padding: 0 45px 30px
+
+                    img
+                        display: block
+                        margin: 30px auto
+
+                    strong
+                        display: block
+                        margin: 10px 0 20px
+                        text-align: center
+                        font-size: 16px
+
+                    span
+                        text-align: center
+                        display: block
+                        font-size: 16px
+                        line-height: 24px
+
+                        text-align: center
+
+                        color: #4F4F4F 
+    .banner__produtor
+        br
+            display: none
+ 
+    
+    .attr__product
+        {container}
+        display: flex
+        justify-content: space-between
+        margin-bottom 50px
+
+        @media(max-width: 991px)
+            flex-wrap: wrap
+
+
+        &-left
+            max-width 385px
+            @media(max-width: 991px)
+                max-width 100%
+                width 100%
+
+            br
+                display: none
+
+            color: #CFB486
+
+            span
+                font-size: 60px
+                font-family: 'Abril Fatface', cursive
+                font-weight: 400
+
+            strong  
+                font-size: 30px
+                display: block
+
+            p
+                font-size: 16px
+                line-height: 28px
+                color: #4F4F4F  
+                padding-left 50px
+                          
+
+        &-right
+            ul
+                max-width 660px
+                display: flex
+                justify-content space-between
+                flex-wrap: wrap
+
+                @media(max-width: 991px)
+                    max-width 100%
+                    width 100%
+
+                li
+                    background: #F2F2F2
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+                    border-radius: 5px
+                    width 48%
+                    display: flex
+                    align-items: center
+                    justify-content: space-around
+                    margin-bottom 20px
+                    padding: 15px 
+
+                    @media(max-width: 991px)
+                        width 100%
+                        justify-content: center
+                        margin: 10px 0
+
+                    span
+                        width 190px
+                    
+
+                    strong
+                        font-weight: bold
+                        font-size: 16px
+                        line-height: 20px
+                        display: block     
+                        margin-bottom 5px    
+
+                .tipo
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAMAAAC7xnO3AAAAilBMVEUAAADPr4DOtYTHr4DPr4DPr4fKtYXPtYXLs4PPs4PMsoPMsobPsoPPtIbNsoXNtYXPsoXPtYXPtYjNtIbPtITPtIbPtYfRtYfNs4XPs4XPtIbPtIjRtIbNs4XPs4XPtIXPtYfQtYfPtIbPtYbPtYjQtYbPtIbPtIXPtIbPtIbPtIfPtYbPtIbPtIZxaCpzAAAALXRSTlMAEB8gICAwMEBAUFBQX2BgYGBvcHBwf3+AgI+Pj5CQn5+foK+vr7/Pz9/f3+/KQkv/AAACJElEQVR42uXV0XbTMAzGcZklpBmlLISVZNDOa4cbB/3f//VAzBnckMS94hx+N9rNZ8eSzir/OfdZrjTwKNc5QSvXCVDJVUolyHUaqK3ebN46yaN42XgFuOwkR4c+MInbjGQNoP22qJszsM9YBuDixJQDPMt6ANG3H9oABJeVHEj0XjJUUNenATT0eXNpwck13Ii3enOzPtJ6/7XYBBh2bq8QVw6kHPlNgTScVcEhjKDHbgT8tj7BF1n2BHciA7EQkQO4qSz61RcHu7RGrX0HvJMFKVNCnc7pRGQDvcz7GIFzMd0lpdUyAMRaZniMPXFAi58HKRCmXs9EGwiNdfISAM5nkt7JdiS6meYEKwcmDNuqGVGL1DOXTm1xCvdStpoi6c1Kt5QU5Zg+vrI64K0o7V8Hkk6dple+DNUNPFu35loUsGObEXwhVQDiTh4w+z3E+ZXViOFh2nUgTrOaj0Lojla1r7dWT07KMwyFzLqD53RE9fL0+LrN826hSPXN1Fdz4LvMa9HX/15/Jp8Iyz9DVaq3TmQzQvSFlMtf65RLMbXK7zHEdoRCFnyCeA5Kon1zwvSyqMdwLKo+zfAOhlpWKI8hXaEcZGrTOpvUJtiJCRlJG6bbg54LWwMOso6DLrUXWuehlpUC2CB8042gcJSV0n339peSEbRAIK16B7Vk+UaY1lHydKh7WfUoeWp4LETeg5dMB9AQ0wLm6YEUzFV2/riVf8oPpJNlohDgQFMAAAAASUVORK5CYII=')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+                .produtor
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAAh1BMVEUAAADPr4DOtYTPr4DPr4fKtYXPtYXLs4PPs4PMsoPMsobPtIbNsoXPsoXPtYXPtYjNtITNtIbPtITPtIbPtYfNs4XPs4XPtIjRtIbNs4XPs4XPtIXPtYfQtYfOsobPtIbPtYbPtYjQtYbOtIfPtIbPtIfPtIXPtIbPtIbPtIfPtYbPtIbPtIaw0BCDAAAALHRSTlMAEB8gIDAwQEBQUF9gYGBvcHBwcH+AgI+PkJCfn5+goK+vr7C/v8/P39/f7/COYdIAAAJiSURBVHjaldOJepswDMBxOQeQjqWjC+nISHo5xa7/7/98i+TPY/dS9SuXf9iyiOQS63opV8XKA7uraCQ8JrorZE1w0vB2FR0vR3gHdbuxvZJO8HPC9Zfk2z9SQs+csNtNaISx/omeaIBBEk5y7IDXvdt6PbtCK/yJ1lb3VGJxSzo0uejbyNdCXUL/oJGBLo8nPs9fKM7f56PlBN3YM+RB9jJHlfjw/b2Jg0tM+EwjB91DDqdzpWWxJxq5Q8MegbOjhab8TGhlprKNjHkrkI+eEI2eoGCjdvyJWhnzyCHq/K6uz3yq89EC8vGWp3lkutCa68JoGHNMkCNgpQ4A5zFHNDqW+hF0I4+8wCU9XiMTqZq3nqnJMdITenro6BNb0iHbmWa5PzL2jM/cwIZxoH/kfm92plluCMtINVHBireGtEo0Zmdq0kXamklIApJwnuaO4MwWalJ2eDnSVnilE1XHk3juRW2hJlew1P8Ng9ITrUvJaQpmMz2rlHg5bBntRwvSMcgzndzxKmono6jcEUT03tMobXiRBi/i6dViVKUuLSvlCafUaU/q6hVpaVbpi+Tl5chwIUmUSsSJtUWvc8tzKdYtwfxSarxRG7P3XKSbi7VKFyRbVR2DUdueJS6NplDokYOt0aq4MWrVsLf1mS90S3C6syQ6T5VpxWSd73IKmZ6jTpenkYRk6kg2YS+WwqNRzEiksbmM2v1Ckd7LA2QatKdrK8KGl0JPmrVtzBLJ1Pr2aKeevtBOS2CltezKJ7D3llaFm0I3lpcjOR33cxs+kqzbrO9gfpI428D7mts1V4b7BvP6gv9r0Ua3AAAAAElFTkSuQmCC')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+
+                .teor
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAqCAMAAAB8x3AVAAAAS1BMVEUAAADPr4DPr4DPr4fPtYXLs4PPs4PPsoPPtIbNsoXNtIbPtIbPtYfNs4XNs4XPtYfQtYfOsobPtIbPtIbPtIbPtIfPtYbPtIbPtIZDbofhAAAAGHRSTlMAECAgMEBAUF9gcHB/gJCfn6C/z9/f3++YC+o/AAAAp0lEQVR42t2TA5rEQBQGY7v13/+isdPYHc/Uh6CaD9aAneQ9jqUix0Cj81SA3+MBrRd5o/O9yz94/wJE512B0gqATKEZRJ+bBoikvgK8IYkEwpZoH0iXbXLpdLpcQ7aADcSH1+vya+EQlBefQKzvNRppbBdkMc6xR+rpwpJjbBzinv/FH7nRY8Lsf3J/bJjyo82vuT7M50sO+zcXbzPsCCXtl+QrwcV2woYg9fnrq/YAAAAASUVORK5CYII=')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+
+                .classificacao
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAgCAMAAADQQiM0AAAAbFBMVEUAAADPr4DPr4DPr4fPtYXLs4PPs4PMsoPMsobPtIbNsoXPtYXNtIbPtITPtIbPtYfNs4XPs4XRtIbNs4XPs4XPtYfQtYfOsobPtIbPtYbPtYjPtIbPtIfPtIXPtIbPtIbPtIfPtYbPtIbPtIb1xxFRAAAAI3RSTlMAECAgMEBAUFBfYGBwcHB/gICPkJCfn6Cgr6+/v8/P39/f74q5Z08AAADQSURBVHjaxNBFoiQhEADRRNrdpZy4/x0ni3aoWf/YPjTFLLd5RrQtA20fEoqk8JLCbE4/tdSnve1lwkCnXhZQJLUv6STpksjkdJoPiSnQGpvLGYobFLnATmQMPhUHPvo0FROH4mGcihRw2gcaycS1aMFmorQu6qNCKq/+VszoPzIKbAZlg1bZLzlHMXeoj9DYt4BKnM3VyArC8kdmAdai+RY2UZaEgm4DzVhiroZbqWK2foFWW3l1AFS0Xo7y1e4jYf0N8bKDRPL/hh46zAJMAMelMXMF3RdoAAAAAElFTkSuQmCC')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+                .volume
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAkCAMAAACt+qpmAAAAb1BMVEUAAADPr4DOtYTPr4DPr4fPtYXLs4PPs4PMsoPMsobPsoPPtIbNsoXNtYXPsoXPtYXNtIbPtYfNs4XPs4XPtIbPtIjRtIbNs4XPs4XPtYfQtYfPtIbPtYbPtYjQtYbPtIbPtIbPtIbPtIfPtIbPtIb17aWlAAAAJHRSTlMAEB8gIDBAQFBQUF9gYGBgcH+AgI+Pj5CQn5+gr6+vv8/f3++f2jZlAAABFUlEQVR42nXSVWLDMBCE4d2QHGYG09z/jJU1Siuo/tdRvi1EwnQs5U51eZsBu9KmHdCPSyhsdRFtXxYuoWPtHbw/J+MDOIosBngCGAnbWlRsVwtbo9Vgmwyo113nFHUZAG1HOERZD6wM4QBle+DuTp8zVCZAO+Zpk6Efi/rTdYrqgLqewMij+T9m69wJUTalaqvc+OBppjxFz97q+EFfDSy937i3V5HQxb2qLnDebLgStIHvzs8bCZs0HA8c5xI3MQvDcfrvN8MfU+pJO3+sRq/Z2KDlI/JR1ZfjNy7/Jv59DWL4DtzE9+Q/+Ju+w9faAP1exUNd8vYJO792VbW+9ACaYOPz3/qjpG1rTs2RfpIaY6bR8gN8aSZDuof4ewAAAABJRU5ErkJggg==')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+                .safra
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAqCAMAAADoIdnnAAAAXVBMVEUAAADPr4DPr4DPr4fPtYXLs4PPs4PPsoPPtIbNsoXPtYXPtYjNtIbPtITPtIbPtYfNs4XPtIjRtIbNs4XPtYfQtYfOsobPtIbPtIfPtIbPtIbPtIfPtYbPtIbPtIZux32qAAAAHnRSTlMAECAgMEBAUF9gYG9wcHB/gI+PkJ+foL+/z9/f3+/wNpMUAAAA+klEQVR42t2SBbYjIRQFIe6etL7a/zIHToc8yPyW71JHsMKv8djNwTEyPRzwZAO0Uqg/ToMhmhyyAZpTDt98tvXliZN96Wz8x9J4zhSpll9i7tpYuJgZ7DtXG1eI+/YMFo0mPDNzvVeY+JgUSHPU8aoBLk3FW1PYmfveB6NMxG/24Eqp72K1/wbkk9CyYY5WdTUktKbwiG3BRbUVjiK0Nki0T6baGccx/qhAEqYZDlEtpm5fjTIgsbbFkcWRTOqBCY6yV7tpNDpXqwBp1RSgGKRd7AAtc/kaoCl/REu/vl1T2rUklu8+2yY5W9am2YqIuWljvDk8mLVJ/wDDpDJyKVWwNAAAAABJRU5ErkJggg==')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+                .temperatura
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAkCAMAAAC62DqvAAAAflBMVEUAAADPr4DOtYTHr4DPr4DPr4fKtYXPtYXLs4PPs4PMsoPMsobPsoPNsoXNtYXPtYXPtYjNtIbPtITPtIbPtYfRtYfNs4XPs4XPtIbPtIjRtIbNs4XPs4XPtYfQtYfOsobPtIbPtYbQtYbOtIfPtIbPtIbPtIbPtIfPtIbPtIZ0Uz/gAAAAKXRSTlMAEB8gICAwMEBAUFBQYGBgb3BwcH9/gICPj4+QkJ+foKCvr7C/z9/f7wOKDjIAAAETSURBVHjajZGFEQMxDATPz2FmTmS4/gsMKMy/g96RhVDSqaNbJHgmDzzhcjySetpKUvF05lG3qG/j2XnU28uzwx0gzjnRX8LG5ZfA8ETyqpFWKpUcb/qG6nSRnHV7sVgMbnrIoeqUJ/JXjdZwOGzgTSvvumg2m9U3bb7knonIpnRuE8exec8dSNK8aU/SJaVyW9zpkzXVdbL/cDKOoBojsnO778kWlrZx8sHc7qt5qBk8h/d6VXLeWpMVdChQAnNsuQAw4wI5AxQyuhzzcpx79Eqjl9zdo4UdVMhFc0k27oMO6bRhavueDSgmcALUN7KoAH3dktK9jzzmNRiawTWyOOt4zXOj5Ukl9PBI2pLAICNzMwdUbi/M5B/4YAAAAABJRU5ErkJggg==')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat
+                .regiao
+                    &:before
+                        content: ''
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAMAAADyHTlpAAAAjVBMVEUAAADPr4DOtYTPr4DPr4fKtYXPtYXLs4PPs4PPs4fMsoPMsobPsoPPsobNsoXNtYXPtYXPtYjNtIbPtITPtIbPtYfNs4XPs4XPtIbPtIjRtIbNs4XPs4XPtYfQtYfOsobOtIbPtIbPtYbPtYjQtYbOtIfPtIbPtIfPtIXPtIbPtIbPtIfPtYbPtIbPtIbGTJ8LAAAALnRSTlMAEB8gIDAwQEBAUFBQUGBgYG9wcHB/gICPj4+QkJ+foKCgr6+vsL+/z8/f39/vegpyRAAAAkNJREFUeNp9lYdi4yAMhkXtknT5XHrB3SODi6H63//xDiwrgxtfZ5IP8VvyoBpz+cN5764X9H+MCwwldM0/xcVanJjBxNvfZfM4F5O971bjv+RFAvg1iU20xkxc1uY9gMFQ69djURfI8NAOAFbn5gqIlgp9ADoKiLbzOUmbsluZo4S6BsBNW34DiGvvALiTnNk08m9CdPnfLc7QvGWT2BzK31KhtCNivU7gISEaEt4BNRlvuqSwJzKGLPA0FwWGY78aze79S/79fH29ihrBbBBN/7yOyGykfJAts6sEyljAm6rdH9hNVaYu8+vSA6Y0EggtsPa9JeUF36SUfQxPDQsAbNXnHkxnhCkBMmsGHr0hxQJvl6eqA0+diDIaeFIMAwide9t3h7W2TJIGFMpCpe0ThDd5E+jI4VtOCmZwjHFvNW8Ah6QnQIIjX1STNeu1g0pjiuJn1YvaAldkfOZFyihnqpvVi0Nb2PuOlBHhEKAHpgBeD4gBWSiJ5/EDN9IG8uDFfPwPIwOnCYI0aykzk0ZGp2MdVdSyPXCY2UMC5sGbhDeqym4RdGbF+BLVjKXdZ2UvWnnL6ER9VsUcjqJ0p5+vk62UnVVfmUW1GmkJeFXld62yFJXrwqqUC4x0zgBIUTnkaES952p/GUqUohJhb8gBbXU7046cvPeQ3cYwPiVKbQ5Vnti8yPTPsEnMKntArZoVgJ9UsUz1RZNFluw17Rcyv7r5Sr2UJ8irLq3l+rERTkrWch+gcHB1xZrlbXnE9fYP7zdtGXDsTIDYpgAAAABJRU5ErkJggg==')
+                        width 60px
+                        height 60px
+                        background-position: center
+                        display: block
+                        margin-right 5px
+                        background-repeat: no-repeat                        
+
+.pais__product                 
+    position: absolute
+    font-size: 0
+    top: 0
+    right: 0
+    z-index 99 
+
+ 
+    
+span.pais__product.Argentina
+    background: url('http://casaflora.vteximg.com.br/arquivos/argentina.png')
+    display: block
+    width: 100px
+    height: 70px
+    background-repeat: no-repeat
+    background-position: center
