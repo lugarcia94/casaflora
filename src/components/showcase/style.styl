@@ -108,7 +108,7 @@
         &--name
             letter-spacing: 0.2px
             color: #828282
-            font-size: 15px
+            font-size: 13px
             font-weight: 500
             line-height: 17px
             transition: all 150ms ease-in-out
@@ -187,7 +187,6 @@
                         display: none
 
     &__prices
-        min-height: 63px
         overflow: hidden
 
         .price
@@ -315,8 +314,8 @@
             transition: all 0.2s ease-in-out
 
         &__item
-            &:hover
-                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15)
+            &:hover 
+                opacity: .8
                 border-radius: 7px
 
                 .showcase__actions
@@ -628,3 +627,9 @@ section.duo__showcase
 
 .showcase.showcase__showcasetr 
     max-width: 700px
+
+
+.showcase__prices .price 
+    display: flex
+    align-items: center
+    justify-content: center
