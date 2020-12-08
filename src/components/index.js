@@ -118,3 +118,10 @@ import './qtds';
 import './blackfriday'; 
 
 import './countdown'; 
+
+
+// Loja
+import './loja';
+
+// duvidas
+import './duvidas';

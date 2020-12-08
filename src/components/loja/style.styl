@@ -1,0 +1,227 @@
+#minha-loja
+    padding-top 170px
+    
+.loja
+    display: block
+    padding-bottom 60px
+
+    &__container
+        max-width 1130px
+        padding: 0 15px
+        margin: 0 auto
+        width 100%
+
+    &__top
+        background: #FFFBEB
+        padding: 45px 0
+
+        .loja
+            &__container                        
+                display : flex
+                align-items: center
+
+            &__left
+                flex: 1
+                padding: 10px
+
+                > div
+                    max-width 370px
+                    margin-left: auto
+            
+                    span
+                        font-size: 20px
+                        line-height: 28px
+                        color: #4F4F4F
+
+
+            &__title
+                display: block
+                font-size: 25px
+                line-height: normal
+                color: #4F4F4F
+                text-transform: uppercase
+                margin-bottom 30px
+                font-family: 'Abril Fatface', cursive
+
+                span
+                    display: block
+                    font-size: 40px
+
+            &__right
+                flex: 0 0 650px
+                
+    &__middle
+        padding: 50px 0
+
+        .loja 
+            &__title
+                display: block
+                font-size: 30px
+                line-height: 38px
+                color: #CFB486
+                text-transform: uppercase
+                text-align: center
+                margin-bottom 30px
+                font-family: 'Abril Fatface', cursive
+
+            &__content
+                display: flex
+                align-items: center
+
+            &__maps
+                flex: 0 0 655px
+
+            &__info
+                flex: 1
+                padding-right: 15px
+
+            &__strong
+            &__span
+                display: block
+
+            &__strong
+                font-size: 28px
+                line-height: normal
+                margin-bottom 10px
+            
+            &__endereco,
+            &__span
+                font-size: 20px;
+                line-height: 28px;
+                font-weight: 400
+                margin-bottom 20px
+
+                span
+                    display: block
+
+            &__endereco
+                font-weight: bold
+
+            &__span
+                margin-bottom 30px
+
+            &__action
+                display: flex
+                align-items: stretch
+                justify-content: space-between
+
+            &__phone,
+            &__rota
+                flex: 0 0 48%
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: 16px;
+                font-weight: bold
+                line-height: normal;
+                border-radius: 5px;
+                min-height: 55px
+                letter-spacing: 1px
+
+                svg
+                    margin-right 4px
+
+            &__phone
+                color: #fff
+                background: #A74238;
+
+            &__rota
+                border: 2px solid #CFB486;
+                color: #CFB486
+
+
+    &__bottom
+        display: flex   
+        align-items: stretch
+        justify-content: space-around
+
+        .loja
+            &__content
+                flex 0 0 43%
+                background: #F2F2F2
+                padding: 40px
+                border-radius: 5px
+
+                &--bg 
+                    background-image: url('https://casaflora.vteximg.com.br/arquivos/bgnews.png') 
+            
+
+                > strong
+                    display: block
+                    font-size: 28px;
+                    line-height: 28px;
+                    text-align: center;
+                    color: #4F4F4F;
+                    margin-bottom 20px
+                    
+                > span
+                    display: block
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #828282;
+                    margin-bottom 20px
+
+            &__action
+                display: flex   
+                align-items: center
+                justify-content: space-around
+
+                a
+                    flex: 0 0 45%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    border: 2px solid #CFB486;
+                    border-radius: 5px;
+                    min-height: 60px
+
+                    font-weight: bold;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #CFB486
+
+                    svg
+                        fill:   #f2f2f2
+                        margin-right 10px
+
+                    span
+                        display: block
+                        font-weight: bold;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #CFB486
+                        text-align: center
+
+@media(max-width : 991px)
+    .loja
+        &__top
+            .loja
+                &__container
+                    flex-wrap: wrap
+
+                &__right
+                    flex: 0 0 100%
+                    min-width 0px
+
+        &__middle 
+            
+            .loja
+                &__content
+                    flex-wrap: wrap
+
+                &__maps
+                    order   -1
+                    flex: 0 0 100%
+                    margin-bottom 30px
+
+        &__bottom
+            flex-wrap: wrap
+
+            .loja
+                &__content
+                    flex: 0 0 100%
+                    margin: 15px 0
+                
