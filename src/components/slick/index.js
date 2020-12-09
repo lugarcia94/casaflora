@@ -6,6 +6,14 @@ if ($('#blackfriday-page')) {
     $('.helperComplement').remove();
 }
 
+$('.loja__list').slick({
+    infinite: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false
+});
+
 $('.banner--category .banner__container').slick({
     infinite: false,
     arrows: true,

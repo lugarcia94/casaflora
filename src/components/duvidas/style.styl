@@ -1,3 +1,4 @@
+  
 #minha-fag
     padding-top 170px
 
@@ -52,7 +53,7 @@
 
     &__middle
         @media(min-width : 992px)
-            min-height: 70vh
+            min-height: 95vh
 
         .help
             &__list
@@ -65,7 +66,6 @@
                 max-width 367px
                 border-bottom: 2px solid #F0EADF;
                 padding-right: 20px
-                cursor pointer
 
                 &--open
                     background: #FAF7EE
@@ -176,8 +176,9 @@
     &__bottom
         margin: 40px auto
         background: #F2F2F2;
-        padding: 60px
-
+        padding: 60px 50px 100px 
+        @media (max-width : 991px)
+            padding: 0 15px
         .help
             &__title
                 display block
@@ -186,6 +187,7 @@
                 line-height: normal
                 text-align: center;
                 color: #4F4F4F;
+                margin-bottom: 30px
     
     &__apoio
 
@@ -250,6 +252,7 @@
                     position relative
                     left auto
                     height: 0px
+                    width 100%
 
                 &__item
                     flex-wrap: wrap
