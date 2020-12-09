@@ -1,6 +1,6 @@
 import './style.styl';
 
-$('[data-toggle=modal]').click(function(){
+$('[data-toggle=modal]').click(function () {
     const id = $(this).attr('href');
     modal($(id));
 });
@@ -8,10 +8,16 @@ $('[data-toggle=modal]').click(function(){
 function modal(element) {
     const hide = element.attr('aria-hidden');
 
-    if(hide == 'true')
+    if (hide == 'true')
         element.attr('aria-hidden', false);
     else
         element.attr('aria-hidden', true);
 }
 
 $('.vitrine .pager').first().hide()
+
+$(window).on('load', function () {
+    $('.vtexIdUI-close').click(function () {
+        window.location.href = '/';
+    })
+})
