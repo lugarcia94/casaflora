@@ -194,3 +194,115 @@ section.minibanner-inst
 .visible__desktop
     @media(max-width: 991px)
         display: none
+
+.bannerhtml1
+    padding: 60px 0
+    &-container
+        display: flex
+        justify-content: center
+        max-width 1200px
+        position relative
+        margin: 0 auto
+
+        @media(max-width: 991px)
+            flex-wrap: wrap
+
+    &-left
+        position: absolute
+        font-size: 60px
+        font-family: 'Abril Fatface', cursive
+        color: #fff
+        line-height: 80px
+        text-align: left
+        text-transform: uppercase
+        left 110px
+        top 160px
+
+        @media(max-width: 991px)
+            position relative
+            order: 2
+            left 0
+            top: 0
+            font-size: 35px
+            line-height: 50px
+            width: 100%
+            margin-left: 50px
+            margin-top -50px
+
+        strong
+            font-size: 130px
+
+            @media(max-width: 991px)
+                font-size: 70px
+
+    &-center
+        @media(max-width: 991px)
+            order: -1
+            padding: 0 15px
+    
+    &-right
+        position: absolute
+        top: 0
+        right 0
+        width 100%
+        height 100%
+
+        @media(max-width: 991px)
+            position relative
+            order: 3
+        p
+            font-weight: 500;
+            font-size: 24px;
+            color: #fff;
+            width 217px
+            line-height: 30px;
+            position: absolute
+            right: 160px
+            bottom: 130px
+            text-align: left
+
+            @media(max-width: 991px)
+                position relative
+                bottom: 0
+                right 0
+                margin-left 50px
+                margin-top 30px
+
+        a
+            position: absolute
+            bottom: 50px
+            right 220px
+            font-size: 16px
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #FEF8E0;  
+            display: flex
+            align-items: center
+            border: 1px solid #FEF8E0
+            border-radius: 5px
+            width 150px
+            height 50px
+            justify-content: center
+            @media(max-width: 991px)
+                position relative
+                bottom: 0
+                right 0
+                margin-left 50px
+                margin-top 30px
+            &:after
+                content: ''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAAMFBMVEUAAAD/79//99/69N/799/89d/899/999/999//+OD/+OD++OD++OD++OD++eD++OCvfhw5AAAAD3RSTlMAECAwQFBggKCvv8/f7+/6mGr3AAAAOElEQVR42rXItQHAMAwEwDejpP2nDTNV8ZWHb6ma20XhRqnyiYyp5cpD2SNPEnGm63+Fci+4gFkPQpMDxUvq+GcAAAAASUVORK5CYII=')
+                width 30px
+                height 15px
+                margin-left 10px
+                display: block
+                background-repeat: no-repeat
+          
+
+        img
+            position: absolute
+            top: -50px
+            right: 90px
+            @media(max-width: 991px)
+                display: none

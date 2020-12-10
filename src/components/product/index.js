@@ -161,6 +161,7 @@ if (body.attr("id") == "product-page") {
         $(".buy__now-product").attr('data-id', idProduto)
 
         $.get(urlApi).done(function (data) {
+            console.log(data)
 
             let tipo = data[0].Tipo
             let regiao = data[0].Região
@@ -172,17 +173,19 @@ if (body.attr("id") == "product-page") {
             let temperatura = data[0]['Temperatura Ideal']
             let pais = data[0].Países
 
+
+
             $('<span class="pais__product ' + pais + '">' + pais + '</span>').appendTo('.product__image')
 
             let html = `<ul>
-                <li class="tipo">${tipo}</li>
-                <li class="regiao">${regiao}</li>
-                <li class="produtor">${produtor}</li>
-                <li class="teor">${teor}</li>
-                <li class="classificacao">${classificacao}</li>
-                <li class="volume">${volume}</li>
-                <li class="safra">${safra}</li>
-                <li class="temperatura">${temperatura}</li>
+                <li class="tipo"><span><strong>Tipo</strong>${tipo}</span></li>
+                <li class="regiao"><span><strong>Região</strong>${regiao}</span></li>
+                <li class="produtor"><span><strong>Produtor</strong>${produtor}</span></li>
+                <li class="teor"><span><strong>Teor Alcoólico</strong>${teor}</span></li>
+                <li class="classificacao"><span><strong>Classificação</strong>${classificacao}</span></li>
+                <li class="volume"><span><strong>Volume</strong>${volume}</span></li>
+                <li class="safra"><span><strong>Safra</strong>${safra}</span></li>
+                <li class="temperatura"><span><strong>Temperatura ideal</strong>${temperatura}</span></li>
                 
             </ul>`
 
@@ -204,14 +207,12 @@ if (body.attr("id") == "product-page") {
 
             let harmohtml = data[0]['Harmonizações']
 
-            let htmlharmo = `<h2>Análise Sensorial</h2>
-                ${harmohtml}
-            </ul>`
 
-            $('.product__harm').html(htmlharmo)
-
-
-
+            harmohtml.forEach(function (i) {
+                let imgUrl = i.replace(' ', '-').toLowerCase()
+                let htmlItem = `<li><img src='/arquivos/${imgUrl}.png'/><strong>${i}</strong></li>`
+                $('.product__harm ul').append(htmlItem)
+            })
         })
 
         // thumbsCarousel()
