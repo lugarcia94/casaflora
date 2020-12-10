@@ -298,11 +298,185 @@ section.minibanner-inst
                 margin-left 10px
                 display: block
                 background-repeat: no-repeat
-          
-
+    
         img
             position: absolute
             top: -50px
             right: 90px
+
             @media(max-width: 991px)
                 display: none
+
+.banner__historia
+    padding: 60px 0
+    background-size: cover!important
+    background-repeat: no-repeat
+    &-container
+        display: flex
+        justify-content: center
+        max-width 1200px
+        position relative
+        margin: 0 auto
+
+        @media(max-width: 991px)
+            flex-wrap: wrap
+
+    &-left
+        width: 50%
+
+        @media(max-width: 991px)
+            width 100%
+            display: flex
+            flex-wrap: wrap
+
+        img
+            margin-left 100px
+            @media(max-width: 991px)
+                order: -1
+                width 100%
+                margin-left 0
+                position relative
+
+        span
+            position: absolute
+            font-family: 'Abril Fatface', cursive
+            color: #ECF6ED
+            text-transform: uppercase
+            font-size: 36px
+            text-align: left
+            margin-top 150px
+            line-height: 50px
+
+            @media(max-width: 991px)
+                order: 2
+                width 100%
+                margin-left 0
+                margin-top: 0
+                position relative
+                margin-left 50px
+                
+
+            strong
+                font-size: 64px
+                margin-top 10px
+                display: block
+
+                @media(max-width: 991px)
+                    font-size: 35px
+
+    &-right
+        width 30%
+        margin-left -50px
+        text-align: left
+
+        @media(max-width: 991px)
+            width 100%
+            margin-left 50px
+
+        img
+            position: absolute
+
+            @media(max-width: 991px)
+ 
+                top: 30%;
+                right: 0;
+                max-width: 100px;    
+                display: none        
+        
+        p
+            font-weight: 500
+            font-size: 15px
+            line-height: 25px
+            color: #FFFFFF
+            text-align: left
+            max-width 400px    
+            margin-top 150px
+
+            @media(max-width: 991px)
+                margin-top 30px
+
+        a
+            bottom: 50px
+            right 220px
+            font-size: 16px
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #FEF8E0;  
+            display: flex
+            align-items: center
+            border: 1px solid #FEF8E0
+            border-radius: 5px 
+            width 210px
+            height 50px
+            justify-content: center
+            margin-top 40px
+            &:after
+                content: ''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAAMFBMVEUAAAD/79//99/69N/799/89d/899/999/999//+OD/+OD++OD++OD++OD++eD++OCvfhw5AAAAD3RSTlMAECAwQFBggKCvv8/f7+/6mGr3AAAAOElEQVR42rXItQHAMAwEwDejpP2nDTNV8ZWHb6ma20XhRqnyiYyp5cpD2SNPEnGm63+Fci+4gFkPQpMDxUvq+GcAAAAASUVORK5CYII=')
+                width 30px
+                height 15px
+                margin-left 10px
+                display: block
+                background-repeat: no-repeat            
+
+.banner__news
+    margin: 100px auto!important
+
+.bannerloja
+    max-width 460px                
+    min-height 260px
+    width 100%
+    background-repeat: no-repeat!important
+    border-radius: 5px
+    position relative
+
+    &__rodape 
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 15px
+
+        p
+            font-size: 15px
+            color: #fff
+
+        a
+            text-transform: uppercase
+            color: #FFFFFF    
+            width 120px
+            height 40px
+            border-radius: 5px
+            border: 1px solid #fff
+            line-height: 40px
+            text-align: center
+            font-weight: 700
+            font-size: 12px;
+            display: flex
+            align-items: center
+            justify-content: center
+            &:before
+                content: ''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAARCAMAAADe472QAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMAECAwUGBwf4CPn6Cwv8/f78tzf1sAAABjSURBVAjXTY7LDsMgEMQMLQl9wK7//2dzSEGdky3NSAOUc+psANRQ1ajAj3VAU41UbUy1Q1cHagIlNchbUIOhnpSX+qW70yibo8BnSQdq/j3gWAsAhur7ZmquEsBTH+z0A4AL8lsIIFQp3UQAAAAASUVORK5CYII=')
+                width 12px
+                height 18px
+                display: block
+                margin-right 5px
+
+
+    span
+        font-family: 'Abril Fatface', cursive
+        color: #333333
+        font-size: 60px
+        text-transform: uppercase
+        line-height: 60px
+        margin-top -90px
+        display: block
+        font-weight: 400
+
+        strong
+            display: block
+            color: #CFB486
+            font-weight: 400
