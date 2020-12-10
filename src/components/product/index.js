@@ -161,8 +161,6 @@ if (body.attr("id") == "product-page") {
         $(".buy__now-product").attr('data-id', idProduto)
 
         $.get(urlApi).done(function (data) {
-            console.log(data)
-
             let tipo = data[0].Tipo
             let regiao = data[0].Região
             let produtor = data[0].Produtor
@@ -172,8 +170,6 @@ if (body.attr("id") == "product-page") {
             let safra = data[0].Safra
             let temperatura = data[0]['Temperatura Ideal']
             let pais = data[0].Países
-
-
 
             $('<span class="pais__product ' + pais + '">' + pais + '</span>').appendTo('.product__image')
 
@@ -189,9 +185,9 @@ if (body.attr("id") == "product-page") {
                 
             </ul>`
 
-            $('.attr__product-right').html(html)
-
-
+            if (html) {
+                $('.attr__product-right').html(html)
+            }
 
             let visual = data[0]['Análise Visual']
             let olfativo = data[0]['Análise Olfativo']
@@ -203,7 +199,10 @@ if (body.attr("id") == "product-page") {
                 <li>${gustativo}</li>
             </ul>`
 
-            $('.analise__sensorial').html(htmlSensor)
+            if (htmlSensor) {
+                $('.analise__sensorial').html(htmlSensor)
+            }
+
 
             let harmohtml = data[0]['Harmonizações']
 
@@ -213,6 +212,17 @@ if (body.attr("id") == "product-page") {
                 let htmlItem = `<li><img src='/arquivos/${imgUrl}.png'/><strong>${i}</strong></li>`
                 $('.product__harm ul').append(htmlItem)
             })
+
+            if (!harmohtml) {
+                $(".product__harm").hide()
+            }
+
+            let infoProd = data[0]['Infos do Produtor']
+            if (infoProd) {
+                $('.banner__produtor').html(infoProd)
+            }
+
+
         })
 
         // thumbsCarousel()
