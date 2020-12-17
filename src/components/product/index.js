@@ -194,9 +194,21 @@ if (body.attr("id") == "product-page") {
             let gustativo = data[0]['Análise Gustativo']
 
             let htmlSensor = `<h2>Análise Sensorial</h2><ul>
-                <li>${visual}</li>
-                <li>${olfativo}</li>
-                <li>${gustativo}</li>
+                <li>
+                    <img src="/arquivos/visual.png"/>
+                    <strong>Visual</strong>
+                    <span>${visual}</span>
+                </li>
+                <li>
+                    <img src="/arquivos/olfativo.png"/>
+                    <strong> Olfativo </strong>
+                    <span>${olfativo}</span>                
+                </li>
+                <li>
+                    <img src="/arquivos/gustativo.png"/>
+                    <strong> Gustativo </strong>                
+                    <span>${gustativo}</span>
+                </li>
             </ul>`
 
             if (htmlSensor) {
