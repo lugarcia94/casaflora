@@ -5,13 +5,16 @@
         font-size: 13px
         padding: 5px 0
         color: #fff
-
+        font-weight: 800
+        
         @media(max-width: 991px)
             font-size: 14px
             padding: 15px          
 
         strong, a
             color: #FF4F00
+
+
     .wrapper__container > &
         position            : fixed
         top                 : 0
@@ -185,6 +188,8 @@
             width 100%
 
             li.has__child
+                position relative
+
                 &:after
                     content: ''
                     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAG1BMVEUAAABQUFBQUFBQUFBMTExOTk5PT09PT09PT0/Y1xSxAAAACHRSTlMAECAwQKDf7wLNULsAAAA0SURBVHjaYqAmABQdFwQAxDAQBEsB/4YfumG4mavS+Y7aRkv9S+Kfka6BW7iEURmVUdXkvU9QAQ6LMXSVAAAAAElFTkSuQmCC')
@@ -193,10 +198,19 @@
                     display: block
                     margin-left 5px
 
+                    @media(max-width : 991px)
+                        position: absolute 
+                        right 20px 
+                        top: 20px
+
+
             >li
                 display: flex
                 align-items: center
                 min-height: 45px
+
+                @media(max-width: 991px)
+                    flex-wrap: wrap
 
                 &:last-child
                     a
@@ -232,6 +246,7 @@
                         max-width 100%
                         top: 0
                         flex-wrap: wrap
+                        transform: translateX(0)
 
                         .category__image
                             display: none
@@ -254,11 +269,11 @@
                                     strong
                                         text-transform: uppercase
                          
-
-                &:hover
-                    .newmenu__list-sub
-                        display: flex 
-                        justify-content: space-between
+                @media(min-width : 992px)
+                    &:hover
+                        .newmenu__list-sub
+                            display: flex 
+                            justify-content: space-between
 
 .header__newmenu
     @media(max-width: 991px)
@@ -383,10 +398,10 @@
     font-weight: 700;
     cursor pointer
     font-size: 25px;
-                    
-.open__sub
-    >.newmenu__list-sub
-        display: block 
+
+
+ .header__newmenu .header__newmenu--menu >ul > .open__sub >.newmenu__list-sub
+    display: block 
 
 .minicart__container 
     display: none
