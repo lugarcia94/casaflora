@@ -1745,3 +1745,79 @@ span.pais__product.Argentina
     @media(max-width: 991px)
         display: none
            
+
+.product__buyOk
+    position: fixed 
+    top: 0
+    right 0 
+    bottom: 0   
+    right -100%
+    visibility: hidden
+    transition: all 200ms ease-in-out
+    height: 100vh 
+    display: flex   
+    align-items: center
+    justify-content: flex-end
+    width 100%
+    z-index 999
+
+    &--content
+        height: 100vh 
+        display: flex   
+        align-items: center
+        justify-content: center
+
+        background: #fff
+        
+        max-width 437px
+        width 100%
+        padding: 50px 
+
+        position: fixed
+
+        @media(max-width : 991px)
+            padding: 30px
+
+    &--title
+        display: block
+        text-align: center
+        margin-bottom 15px
+        font-size: 25px;
+        line-height: normal
+        text-align: center
+        color: #4F4F4F
+
+        strong
+            display: block
+            color   #A74238
+
+    &--link,
+    &--fechar
+        display: block
+        
+        background: #A74238
+        color: #fff
+        border-radius: 3px;
+        text-transform: uppercase
+
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 40px;
+
+        text-align: center
+
+        text-decoration: none
+
+    &--fechar
+        color   #A74238
+        border: 2px solid #A74238;
+        background: #fff
+        border-radius: 3px;
+        margin-top 15px
+
+.add__toCar
+    .product__buyOk
+        right 0
+        visibility visible
+        background: rgba(0,0,0,.5)
+        

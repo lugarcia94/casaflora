@@ -188,7 +188,7 @@
             width 100%
 
             li.has__child
-                position relative
+                
 
                 &:after
                     content: ''
@@ -203,6 +203,8 @@
                         right 20px 
                         top: 20px
 
+                @media(max-width : 992px)
+                    position relative
 
             >li
                 display: flex
@@ -385,7 +387,8 @@
                     padding: 20px 
 
 
-.close__menu.visible__mobile 
+.close__menu.visible__mobile,
+.sidebar__button--close
     width: 70px;
     position: absolute;
     left: -70px;

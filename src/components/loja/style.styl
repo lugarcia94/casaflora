@@ -56,7 +56,12 @@
                 max-width 650px
 
             &__list
-                display: flex
+                &:not(.slick-slider)
+                    display: flex
+                    overflow hidden
+                    
+                    li  
+                        flex: 0 0 100%
 
                 .slick-arrow
                     bottom: -60px       

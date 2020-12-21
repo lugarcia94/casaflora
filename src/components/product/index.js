@@ -565,12 +565,15 @@ $('.buy__now-product').on('click', function () {
         seller: '1',
     }
     vtexjs.checkout.addToCart([item], null, 1).done(function (orderForm) {
-        window.alert("Produto adicionado com sucesso!");
-
+        $('body').addClass('add__toCar');
     })
 })
 
 
 $('button.button.button__minicart').on('click', function () {
     window.location.href = "/checkout/#/cart";
+})
+
+$('.product__buyOk--fechar').on('click', function () {
+    $('body').removeClass('add__toCar');
 })

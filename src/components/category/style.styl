@@ -114,6 +114,7 @@ li.labels__item.labels__item--percent
 
 .visible__ony-category
     display: none
+
     @media(max-width: 992px)
         display: block
         margin-bottom 15px
@@ -143,6 +144,7 @@ li.labels__item.labels__item--percent
             justify-content: space-between
             align-items: center
             margin: 20px 0
+
             li
                 width 45%
                 &:first-child
@@ -172,4 +174,9 @@ li.labels__item.labels__item--percent
                     justify-content: center 
 
 
-                        
+            @media(max-width : 991px)
+                flex-wrap: wrap
+
+                li
+                    width 100%
+                    margin: 5px 0

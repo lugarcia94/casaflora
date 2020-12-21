@@ -84,17 +84,24 @@ section.minibanner-inst
 
 .minibanner-mid
     background: #CAD7CB
-    padding: 30px
+    padding: 90px 0
+
+    @media(max-width : 991px)
+        padding: 30px 0
+
     &__container
-        max-width: 1320px
+        max-width: 1120px
         width: 100%
         padding: 0 15px
         margin: 0 auto
         display: flex
-        align-items: center
+        align-items: flex-end
         justify-content: space-around
+
         @media(max-width : 767px)
             flex-wrap: wrap
+
+        
     .box-banner
         padding: 5px
         overflow hidden
@@ -124,7 +131,34 @@ section.minibanner-inst
 .banner--full
 
     .slick-list
-        margin: 0 auto
+        img
+            margin: 0 auto
+    
+    .slick-dots
+        position: absolute
+        bottom: 20px 
+        left: 50%
+        transform: translateX(-50%)
+
+        button
+            width: 20px
+            height: 20px
+            padding: 0
+            border: 0
+            border-radius: 50%
+            font-size: 0
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAEHRSTlMACBAYICgwOEBIUGBocHiA65quNAAAAD9JREFUeNpFi4MBAEEMBOesoP9q34izoK1RCG2uhLi72jE6y5+o9PeMBLuvCfE5F4xP8NsaepLn6JTZM5Qx4w77/QSGCWNwPQAAAABJRU5ErkJggg==");
+            margin: 0 6px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        .slick-active
+            button
+                width 20px
+                height 20px
+                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAOVBMVEUAAAD///////////////////////////////////////////////////////////////////////8KOjVvAAAAE3RSTlMADRkmM0BMTVlmc3+AjJmmsr/MsfgTiQAAAEBJREFUeNo1ioMBwEAMRd/ZSPbftW74RZ7VY/IYBr1qynUiW7/y1B8arLyogP3ECu2DYlh/NnBH+35g6tlBqtWeKlgFVeSOMJUAAAAASUVORK5CYII=");
+                background-repeat: no-repeat;
+                background-position: center;
 
     .banner__container 
         display: flex 
@@ -148,11 +182,6 @@ section.minibanner-inst
         .box-banner
             padding-bottom: 40px
 
-        .slick-dots
-            position: absolute
-            bottom: 20px 
-            left: 50%
-            transform: translateX(-50%)
 
     @media (min-width: 992px) 
         display: block 
@@ -252,7 +281,7 @@ section.minibanner-inst
             order: 3
         p
             font-weight: 500;
-            font-size: 24px;
+            font-size: 22px;
             color: #fff;
             width 217px
             line-height: 30px;
@@ -306,6 +335,197 @@ section.minibanner-inst
 
             @media(max-width: 991px)
                 display: none
+
+.bannerhtml2
+    position: relative
+
+    &-container
+        display: flex
+        justify-content: center
+        max-width 500px
+        position relative
+        margin: 0 auto
+
+        @media(max-width: 991px)
+            flex-wrap: wrap
+
+    &-left
+        position: absolute
+        font-family: 'Abril Fatface', cursive
+        color: #fff
+        font-size: 180px;
+        line-height: 70px;
+        text-align: left
+        text-transform: uppercase
+        left -70px
+        top 50px
+
+        @media(max-width: 991px)
+            position relative
+            order: 2
+            left 0
+            top: 0
+            font-size: 70px
+            line-height: 70px
+            width: 100%
+            margin-top -50px
+
+    &-center
+        @media(max-width: 991px)
+            order: -1
+            padding: 0 15px
+
+    &-botton
+        position: absolute
+        left 40px 
+        bottom: 45px
+        max-width 330px
+    
+        font-size: 24px;
+        line-height: 30px;
+        color: #FFFFFF;
+        z-index 10
+
+        @media (max-width : 991px)
+            max-width : 220px
+
+        a
+            display: flex
+            align-items: center
+            
+            font-size: 16px
+            line-height: normal
+            color: #FFFFFF;
+            border: 1px solid #FEF8E0
+            border-radius: 5px
+
+            width 170px
+            height 50px
+            justify-content: center
+            
+            margin-top 50px
+
+            @media(max-width: 991px)
+                position relative
+                bottom: 0
+                right 0
+                margin-top 30px
+
+            &:after
+                content: ''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAAMFBMVEUAAAD/79//99/69N/799/89d/899/999/999//+OD/+OD++OD++OD++OD++eD++OCvfhw5AAAAD3RSTlMAECAwQFBggKCvv8/f7+/6mGr3AAAAOElEQVR42rXItQHAMAwEwDejpP2nDTNV8ZWHb6ma20XhRqnyiYyp5cpD2SNPEnGm63+Fci+4gFkPQpMDxUvq+GcAAAAASUVORK5CYII=')
+                width 30px
+                height 15px
+                margin-left 10px
+                display: block
+                background-repeat: no-repeat
+    
+    &-right
+        position: absolute
+        top: -40px
+        right -20px
+        width: 191px;
+        height: 191px;
+
+        @media(max-width: 991px)
+            top: 20px
+            right 20px
+            width: 121px;
+            height: 121px;
+
+
+.bannerhtml3
+    position: relative
+
+    &-container
+        display: flex
+        justify-content: center
+        max-width 500px
+        position relative
+        margin: 0 auto
+
+        @media(max-width: 991px)
+            flex-wrap: wrap
+
+    &-left
+        position: absolute
+        font-family: 'Abril Fatface', cursive
+        color: #fff
+        font-size: 90px;
+        line-height: 80px;
+        text-align: left
+        text-transform: uppercase
+        left 40px
+        top -90px
+        
+        @media(max-width: 991px)
+            position relative
+            order: 2
+            left 0
+            top: 0
+            font-size: 35px
+            line-height: 50px
+            width: 100%
+            margin-left: 50px
+            margin-top -50px
+
+    &-center
+        @media(max-width: 991px)
+            order: -1
+            padding: 0 15px
+
+    &-botton
+        position: absolute
+        left 40px 
+        bottom: 45px
+        max-width 260px
+    
+        font-size: 24px;
+        line-height: 30px;
+        color: #FFFFFF;
+        z-index 10
+
+        a
+            display: flex
+            align-items: center
+            
+            font-size: 16px
+            line-height: normal
+            color: #FFFFFF;
+            border: 1px solid #FEF8E0
+            border-radius: 5px
+
+            width 170px
+            height 50px
+            justify-content: center
+            
+            margin-top 50px
+
+            @media(max-width: 991px)
+                position relative
+                bottom: 0
+                right 0
+                margin-left 50px
+                margin-top 30px
+
+            &:after
+                content: ''
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAAMFBMVEUAAAD/79//99/69N/799/89d/899/999/999//+OD/+OD++OD++OD++OD++eD++OCvfhw5AAAAD3RSTlMAECAwQFBggKCvv8/f7+/6mGr3AAAAOElEQVR42rXItQHAMAwEwDejpP2nDTNV8ZWHb6ma20XhRqnyiYyp5cpD2SNPEnGm63+Fci+4gFkPQpMDxUvq+GcAAAAASUVORK5CYII=')
+                width 30px
+                height 15px
+                margin-left 10px
+                display: block
+                background-repeat: no-repeat
+    
+
+    &-right
+        position: absolute
+        top: -40px
+        right -20px
+        width: 191px;
+        height: 191px;
+
+
 
 .banner__historia
     padding: 60px 0

@@ -3,7 +3,7 @@
         position            : fixed
         top                 : 0
         left                : 0
-        z-index             : 100
+        z-index             : 9999
 
         width               : 100%
         height              : 100%
@@ -71,29 +71,18 @@
             height          : 50px
 
             border          : 0
-
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAMAAABhTZc9AAABBVBMVEUAAAD/////8v//8/P48fj48fj07PT07fP07fPz7fPz7fP07PPz7fL07PP07fP07fP07fPBbcXBbsXCbsXCbsbCd8vCeMvGccPGccTGe8rIfcvKdMHLdMHLdMLPd7/Qd7/Qd8DQeMDUer3Ver7Ve77Yq9zZfbvZrt3afrzbsN3btN/cs93ctuDdstzegLnegbrfgbrftNzgs9vguN/htdvhttzhu+DiuN3jg7fjhLjjt9rkutzluNnmt9jmu9voh7boutnpudfpu9jrutbsirTsvdfsv9ntirTti7TtlLrul7zuvtbuwNjuwtnwwNXwwtfxmbrymrryv9PywNXyxdjyx9nz7PKGgIykAAAAEXRSTlMABhMVJCVej6mqw8zd5vn6/GN45GEAAAEXSURBVHjafZN5V4MwDMADm0BhwDyZypzXdJ54C16dunlt3prv/1F8CCV9E/v7p0nz0iRNAgW6YTmu5zqWocMoVVZHQZ1VQUYzfZTxTY2MFRtHsSuFsYZ/qeVmjTxl7OxxE8sxf7P1sRw/zZzlSnv2MBOGjx+ZwAB0UefMeHCcnrf84S2vWwcDc7Yng/AM8Trh99+YYYCFgq1GuHhxGcX8VdxY4GDBfnNhpRMlQxQ44CJxtLTc2b0j3QUPiYPW6lrUJ92TfXfmU2syIF8p7kaj2brq7sX8pYhLOW9OBOE54k3Me18iZ6p3eio4Tc8+772Leumv1udOMuH56bP4K2D4H0zdI2V/1bOhniv1TKrnmRgr3QX1Hv0A1fG9SC1o+YgAAAAASUVORK5CYII=')
-            font-size: 0
-            background-repeat: no-repeat
-            background-color: #fff
-            background-position: center
+            line-height: normal
+            
             right 0
+            left auto
             position: absolute
 
 
         &--open
-            position            : fixed
-            bottom              : 20px
-            left                : 20px
-            z-index             : 50
-
             width               : 45px
             height              : 45px
-
-            border              : 0
-            border-radius       : 50%
-
-            background-image    : linear-gradient(90deg, color[0] 0%, color[0] 100%)
+            background: transparent
+            border: none
     img 
         + span 
             display             : none 
@@ -138,8 +127,10 @@
         align-items                 : stretch  
         flex-wrap                   : wrap
         margin                      : -4px -2px
+        
         label 
             margin                  : 4px
+
     .ver-filtros 
         position relative
         font-size: 0
@@ -199,6 +190,9 @@
 .search-single-navigator
     padding                     : 0
 
+    @media(max-width : 991px)
+        padding: 15px
+
     li, h4
         margin-bottom           : 5px 
 
@@ -217,8 +211,8 @@
         margin-bottom           : 15px
 
         a 
-            color                   : #CFB486
-            font-weight             : 900
+            color                   : #A74238
+            font-weight             : 500
             font-size               : 14px
             text-transform          : uppercase
 
@@ -226,8 +220,8 @@
                 text-decoration     : none 
 
     h5:not(first-child)
-        color                   : #CFB486
-        font-weight             : 900
+        color                   : #A74238
+        font-weight             : 500
         font-size               : 14px
         text-transform          : uppercase
         margin-bottom 15px
@@ -247,8 +241,30 @@
             margin              : 4px
 
     ul
-        max-height: 400px 
-        overflow auto
+        display: none
+
+
+    h5
+        position relative
+
+        &:before
+            content: ''
+            width 15px 
+            height 15px
+            display: block
+
+            position absolute
+            top: 0
+            right 0
+
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAADFBMVEUAAACAgICCgoKCgoK/LadLAAAAA3RSTlMAIN95ni85AAAALElEQVR42rXHsREAIBTCUMH9d1YvHIX9pyFvDc4WIftxY93IqZeocIVRjf4dG2wAYdSeBT8AAAAASUVORK5CYII=");
+            background-repeat: no-repeat
+            
+            transition: all 300ms ease-in-out
+        &.inativo 
+            &:before
+                transform: rotate(180deg)
+                background-position: center
 
 .search-multiple-navigator
     padding                     : 15px
@@ -318,6 +334,7 @@
         text-transform      : lowercase
         color               : #453f3f
         margin-bottom       : 15px
+
     .fields-thumbs
         .ver-filtros
             margin              : 4px
