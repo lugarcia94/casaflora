@@ -11,6 +11,7 @@
         margin: 0 auto
     &__wrapper
         padding: 13px 0
+
     &__list
         display: flex
         align-items: center
@@ -44,7 +45,34 @@
                     font-size: 15px
                     color: #4F4F4F
                     text-decoration: underline
+        .slick
+            &-prev
+                left: 15px
 
+                &:before
+                    content: ''
+                    display: block
+                    width: 30px
+                    height: 30px
+                    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAMAAACqTK3AAAAAHlBMVEUAAABQUFBQUFBQUFBOTk5PT09PT09PT09PT09PT09IqiXFAAAACXRSTlMAECBAoK+/z98+GbJWAAAALElEQVR42mPAA1g5mNCF2DgxxJg4BkaMmZOTFUMVOyOdRBgwRRhY2OAimAAANbsBt6uk3CsAAAAASUVORK5CYII=');
+                    transform: scale(-1)
+                    background-repeat: no-repeat
+                    background-size: 20px
+                    background-position: center
+
+            &-next
+                right: 15px
+
+                &:before
+                    content: ''
+                    display: block
+                    width: 30px
+                    height: 30px
+                    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAMAAACqTK3AAAAAHlBMVEUAAABQUFBQUFBQUFBOTk5PT09PT09PT09PT09PT09IqiXFAAAACXRSTlMAECBAoK+/z98+GbJWAAAALElEQVR42mPAA1g5mNCF2DgxxJg4BkaMmZOTFUMVOyOdRBgwRRhY2OAimAAANbsBt6uk3CsAAAAASUVORK5CYII=');
+
+                    background-repeat: no-repeat
+                    background-size: 20px
+                    background-position: center
 
     &__title
         font-size: 15px
@@ -93,3 +121,6 @@
                 color              : color[0]
     &__content
         white-space: nowrap
+
+
+    
