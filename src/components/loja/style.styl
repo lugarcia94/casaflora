@@ -55,7 +55,22 @@
                 flex: 0 0 650px       
                 max-width 650px
 
+                .loja
+                    &__list
+                        display: flex!important
+                        flex-wrap : wrap
+
+                    .slick-list
+                        flex: 0 0 100%
+
+            .slick-list.draggable
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
             &__list
+                justify-content: space-around;
+
                 &:not(.slick-slider)
                     display: flex
                     overflow hidden
@@ -64,9 +79,16 @@
                         flex: 0 0 100%
 
                 .slick-arrow
-                    bottom: -60px       
+                    position: relative
                     top: auto
                     background: transparent
+
+
+                .slick-prev
+                    order: 2
+
+                .slick-next
+                    order: 2
                 
     &__middle
         padding: 50px 0
@@ -81,6 +103,7 @@
                 text-align: center
                 margin-bottom 30px
                 font-family: 'Abril Fatface', cursive
+                font-weight: 100
 
             &__content
                 display: flex
@@ -112,8 +135,6 @@
                 span
                     display: block
 
-            &__endereco
-                font-weight: bold
 
             &__span
                 margin-bottom 30px
