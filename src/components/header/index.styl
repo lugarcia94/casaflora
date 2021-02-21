@@ -217,7 +217,7 @@
                     flex-wrap: wrap
 
                 &:last-child
-                    a
+                    > a
                         color: #FF0808!important
 
 
@@ -255,18 +255,27 @@
                         .category__image
                             display: none
 
+                    @media (min-width : 992px)
+                        box-shadow: 720px 0 0 0 #FEFAF2, -720px 0 0 0 #FEFAF2
+
                     >.newmenu__list-nv2
                         li
                             >a
                                 color: #A74238
-                                font-size: 14px
+                                font-size: 18px
                                 font-weight: 500
                                 text-transform: uppercase
+
+                                @media (min-width : 992px)
+                                    color: #CFB486
+                                    font-size: 13px
+                                    font-weight: bold
 
                         .newmenu__list-nv3
                             li
                                 a
-                                    font-size: 14px
+                                    font-size: 18px
+                                    font-weight: 500
                                     color: #4F4F4F
                                     text-transform: none
 
@@ -337,7 +346,7 @@
             span
                 display: block
                 width 100%
-                font-weight: 700
+                font-weight: 400
                 font-size: 16px
                 color: #fff
                 display: flex
@@ -355,7 +364,7 @@
                 a
                     font-size: 13px
                     color: #ffffff
-                    font-weight: 700
+                    font-weight: 400
                     text-transform: uppercase
                     margin-right 30px
                     display: flex
@@ -372,7 +381,7 @@
 
 
                     img
-                        margin-right 5px
+                        margin-right 10px
 
         .header__newmenu--right
             display: none
@@ -382,7 +391,7 @@
 
             >ul
                 flex-wrap: wrap
-                
+                overflow: auto
 
                 >li:not(.header__menu-mobile)
                     width 100%
@@ -411,3 +420,12 @@
 .minicart__container 
     display: none
         
+@media (min-width : 992px)
+    .newmenu
+        &__contact
+            display: none
+
+@media (max-width : 991px)
+    .newmenu
+        &__contact
+            display: none

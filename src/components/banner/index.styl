@@ -359,7 +359,8 @@ section.minibanner-inst
         text-transform: uppercase
         left -70px
         top 50px
-
+        z-index 1
+        
         @media(max-width: 991px)
             position relative
             order: 2
@@ -457,6 +458,7 @@ section.minibanner-inst
         text-transform: uppercase
         left 40px
         top -90px
+        z-index 1
         
         @media(max-width: 991px)
             position relative
@@ -531,6 +533,10 @@ section.minibanner-inst
     padding: 60px 0
     background-size: cover!important
     background-repeat: no-repeat
+
+    @media(max-width : 991px)
+        padding: 0 0 60px
+
     &-container
         display: flex
         justify-content: center
