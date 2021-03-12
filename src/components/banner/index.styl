@@ -162,6 +162,7 @@ section.minibanner-inst
 
     .banner__container 
         display: flex 
+        justify-content: center
         overflow: hidden
     
     .box-banner 
@@ -179,8 +180,8 @@ section.minibanner-inst
         //     max-width: 220%
         //     left: 50%
         //     transform: translateX(-50%)
-        .box-banner
-            padding-bottom: 40px
+        // .box-banner
+        //     padding-bottom: 40px
 
 
     @media (min-width: 992px) 
@@ -263,6 +264,7 @@ section.minibanner-inst
 
             @media(max-width: 991px)
                 font-size: 70px
+                color: #c9d7cb
 
     &-center
         @media(max-width: 991px)
@@ -649,6 +651,11 @@ section.minibanner-inst
 body.home
     .banner__news
         margin: 100px auto!important
+
+        @media(max-width: 991px)
+            margin: 30px auto!important
+            margin-top 100px!important
+            
 
 .bannerloja
     max-width 460px                
