@@ -279,7 +279,7 @@ section.minibanner-inst
         height 100%
 
         @media(max-width: 991px)
-            position relative
+            position static
             order: 3
         p
             font-weight: 500;
@@ -336,7 +336,9 @@ section.minibanner-inst
             right: 90px
 
             @media(max-width: 991px)
-                display: none
+                top: 0
+                right 0
+                max-width: 100px
 
 .bannerhtml2
     position: relative

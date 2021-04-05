@@ -167,7 +167,11 @@
  
 
         &:nth-child(3)
-            order: 3
+            order: 3    
+            justify-content: flex-end
+
+            .resultado-busca-filtro
+                display none
 
         &:nth-child(4)
             order: 1
@@ -1061,7 +1065,7 @@ body.institutional
 
 #vtexIdContainer .vtexIdUI #vtexIdUI-auth-selector .modal-body
     padding: 10px 30px 30px
-    top: 40px
+    top: 70px
 
 #vtexIdContainer .vtexIdUI #vtexIdUI-auth-selector .vtexIdUI-send-email i
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KPHRpdGxlPiYjMjM5OyYjMTMwOyYjMTMyOy5zdmc8L3RpdGxlPgo8ZGVzYz5DcmVhdGVkIHVzaW5nIEZpZ21hPC9kZXNjPgo8ZyBpZD0iQ2FudmFzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTY5NiAxMjcpIj4KPGcgaWQ9IiYjMjM5OyYjMTMwOyYjMTMyOyI+Cjx1c2UgeGxpbms6aHJlZj0iI3BhdGgwX2ZpbGwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OTYgLTEyOCkiLz4KPC9nPgo8L2c+CjxkZWZzPgo8cGF0aCBpZD0icGF0aDBfZmlsbCIgZD0iTSA2LjUgNEMgNi41IDQuODI4MTMgNS44MjgxMiA1LjUgNSA1LjVDIDQuNzczNDQgNS41IDQuNTU0NjkgNS40NDUzMSA0LjM1MTU2IDUuMzUxNTZDIDQuNDQ1MzEgNS41NTQ2OSA0LjUgNS43NzM0NCA0LjUgNkMgNC41IDYuODI4MTMgMy44MjgxMiA3LjUgMyA3LjVDIDIuMTcxODggNy41IDEuNSA2LjgyODEzIDEuNSA2QyAxLjUgNS4xNzE4OCAyLjE3MTg4IDQuNSAzIDQuNUMgMy4yMjY1NiA0LjUgMy40NDUzMSA0LjU1NDY5IDMuNjQ4NDQgNC42NDg0NEMgMy41NTQ2OSA0LjQ0NTMxIDMuNSA0LjIyNjU2IDMuNSA0QyAzLjUgMy4xNzE4NyA0LjE3MTg3IDIuNSA1IDIuNUMgNS44MjgxMiAyLjUgNi41IDMuMTcxODcgNi41IDRaTSAxMy4xNDg0IDkuNUMgMTMuMTQ4NCA5LjI3MzQ0IDEwLjk2ODcgNy4yMTg3NSAxMC42Nzk3IDYuOTI5NjlDIDEwLjYzMjggNi44ODI4MSAxMC41NjI1IDYuODUxNTYgMTAuNSA2Ljg1MTU2QyAxMC4zMjAzIDYuODUxNTYgOS42MDE1NiA3LjU3MDMxIDkuNjAxNTYgNy43NUMgOS42MDE1NiA3Ljk1MzEyIDEwLjMzNTkgOC41ODU5NCAxMC41IDguNzVMIDkuNzUgOS41TCA2Ljk3NjU2IDYuNzI2NTZDIDcuNTg1OTQgNS45MDYyNSA4IDQuOTA2MjUgOCAzLjg3NUMgOCAyLjE3MTg4IDYuODIwMzEgMSA1LjEyNSAxQyAyLjU2MjUgMSAwIDMuNTYyNSAwIDYuMTI1QyAwIDcuODIwMzEgMS4xNzE4OCA5IDIuODc1IDlDIDMuOTA2MjUgOSA0LjkwNjI1IDguNTg1OTQgNS43MjY1NiA3Ljk3NjU2TCAxMC45Njg3IDEzLjIxODhDIDExLjEwOTQgMTMuMzU5NCAxMS4zMDQ3IDEzLjQzNzUgMTEuNSAxMy40Mzc1QyAxMS45Mzc1IDEzLjQzNzUgMTIuNDM3NSAxMi45Mzc1IDEyLjQzNzUgMTIuNUMgMTIuNDM3NSAxMi4zMDQ3IDEyLjM1OTQgMTIuMTA5NCAxMi4yMTg4IDExLjk2ODdMIDEwLjUgMTAuMjVMIDExLjI1IDkuNUMgMTEuNDE0MSA5LjY2NDA2IDEyLjA0NjkgMTAuMzk4NCAxMi4yNSAxMC4zOTg0QyAxMi40Mjk3IDEwLjM5ODQgMTMuMTQ4NCA5LjY3OTY5IDEzLjE0ODQgOS41WiIvPgo8L2RlZnM+Cjwvc3ZnPgo=')
@@ -1192,6 +1196,10 @@ body.institutional
     bottom: 35px !important
     transform: none !important
 
+    @media(max-width : 991px)
+        top: 350px !important
+        bottom: auto  !important
+
 .login #vtexIdUI-auth-selector.vtexIdUI-leave-left, .login #vtexIdUI-auth-selector.vtexIdUI-leave-right, .loginAntecipa #vtexIdUI-auth-selector.vtexIdUI-leave-left, .loginAntecipa #vtexIdUI-auth-selector.vtexIdUI-leave-right
     animation: none !important
 
@@ -1204,7 +1212,7 @@ body.institutional
     text-align: center
 
 .login #vtexIdUI-auth-selector .vtexIdUI-providers-list, .loginAntecipa #vtexIdUI-auth-selector .vtexIdUI-providers-list
-    margin-top: 40px
+    margin-top: 20px
     position: relative
 
 .login #vtexIdUI-auth-selector .modal-body::before, .loginAntecipa #vtexIdUI-auth-selector .modal-body::before

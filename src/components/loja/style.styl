@@ -92,6 +92,36 @@
 
                 .slick-next
                     order: 2
+
+                ul.slick-dots 
+                    position: absolute;
+                    bottom: 13px;
+                    margin: 0;
+                    height: auto;
+
+                    li
+                        button
+                            background: transparent
+
+                            &:before
+                                display             : block
+                                content             : ''
+                                background          : svg-load('svg/dots.svg')
+                                width               : 12px
+                                height              : 12px 
+                                background-repeat   : no-repeat
+
+                    .slick-active 
+                        button
+                            background: transparent
+
+                            &:before
+                                display             : block
+                                content             : ''
+                                background          : svg-load('svg/dots-true.svg')
+                                width               : 12px
+                                height              : 12px 
+                                background-repeat: no-repeat
                 
     &__middle
         padding: 50px 0

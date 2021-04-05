@@ -11,7 +11,7 @@ $('.loja__list').slick({
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false
+    dots: true
 });
 
 $('.banner--category .banner__container').slick({
