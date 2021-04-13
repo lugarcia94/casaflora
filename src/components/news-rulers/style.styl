@@ -181,3 +181,58 @@
 
     @media(max-width: 991px)
         flex-wrap: wrap
+
+.product__video
+    img
+        margin: 0 auto
+        text-align: center
+
+@media(min-width: 991px)
+    .duo__showcase
+        .showcase__new
+
+            .product__video
+                position: absolute
+                left: 15px
+                top: 40px
+
+            > a
+                justify-content: flex-start
+            .slick-dots 
+                margin-bottom: 0;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 30px;    
+
+                button
+                    background: #CFB486
+
+            .slick-arrow
+                bottom: 4%!important;
+                transform: none;
+                top: auto;
+
+            h2
+                font-weight: 700
+                font-size: 28px
+                text-align: left
+                max-width: 50%
+
+            .showcase__link--name
+                font-size: 14px
+                text-align: left
+                height: auto
+                font-weight: 600
+
+            .showcase__prices .price
+                justify-content: flex-start
+                margin-top 15px
+
+            .showcase__item  
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .showcase__main
+                    order: -1

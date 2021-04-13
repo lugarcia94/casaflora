@@ -161,11 +161,12 @@ if (body.attr("id") == "product-page") {
         $(".buy__now-product").attr('data-id', idProduto)
 
         $.get(urlApi).done(function (data) {
+            console.log(data)
             let tipo = data[0].Tipo
-            let regiao = data[0].Região
+            let regiao = data[0].Regiao
             let produtor = data[0].Produtor
-            let teor = data[0]['Teor Alcoólico']
-            let classificacao = data[0].Classificação
+            let teor = data[0]['Teor Alcolico']
+            let classificacao = data[0].Classificacao
             let volume = data[0].Volume
             let safra = data[0].Safra
             let temperatura = data[0]['Temperatura Ideal']
@@ -189,9 +190,9 @@ if (body.attr("id") == "product-page") {
                 $('.attr__product-right').html(html)
             }
 
-            let visual = data[0]['Análise Visual']
-            let olfativo = data[0]['Análise Olfativo']
-            let gustativo = data[0]['Análise Gustativo']
+            let visual = data[0]['Analise Visual']
+            let olfativo = data[0]['Analise Olfativa']
+            let gustativo = data[0]['Analise Gustativa']
 
             let htmlSensor = `<h2>Análise Sensorial</h2><ul>
                 <li>

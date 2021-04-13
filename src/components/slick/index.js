@@ -253,6 +253,7 @@ $(".showcase__new .showcase__container > div > ul").slick({
     slidesToScroll: 1,
     vertical: false,
     infinite: false,
+    dots: true,
     responsive: [
         {
             breakpoint: 992,
