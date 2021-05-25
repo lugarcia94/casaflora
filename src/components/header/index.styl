@@ -385,6 +385,9 @@
 
         .header__newmenu--menu
             width 100%
+            @media(max-width: 991px)
+                max-height: 100vh
+                overflow: auto
 
             >ul
                 flex-wrap: wrap
@@ -497,3 +500,23 @@
         
         li
             margin-bottom 10px
+ul.item__menu-mobile
+    display none!important
+@media(max-width 991px) 
+    .is-menu
+        ul.item__menu-mobile
+            margin-bottom 15px
+            display block!important
+            li
+                min-height: 10px!important
+                padding: 15px 20px!important
+
+                a
+                    color: #828282!important
+                    font-size: 18px!important
+                    font-weight: 600!important
+                    text-transform: none!important
+
+                &:last-child
+                    >a
+                        color: #828282!important
